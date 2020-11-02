@@ -1,18 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace ReGrowthCore
 {
     public class SpecialTerrainList : MapComponent
     {
-    	//.ctor... need we say more
+        //.ctor... need we say more
         public SpecialTerrainList(Map map) : base(map) { }
-        
+
+        public List<TerrainInstance> terrainInstances = new List<TerrainInstance>();
+
         public Dictionary<IntVec3, TerrainInstance> terrains = new Dictionary<IntVec3, TerrainInstance>();
+
+        public TerrainInstance[] terrainsArray;
+
         public HashSet<TerrainDef> terrainDefs = new HashSet<TerrainDef>();
+
+        private bool dirty = false;
+
+        private int index = 0;
+
+        private int cycles = 1;
 
         public override void ExposeData()
         {
@@ -46,26 +60,56 @@ namespace ReGrowthCore
         /// <summary>
         /// Ticker for terrains
         /// </summary>
-        public override void MapComponentTick()
+        public void TerrainUpdate(long timeBudget)
         {
-            base.MapComponentTick();
-			foreach (var terr in terrains)
-			{
-                if (terr.Value.def.tickerType == TickerType.Normal)
+            if (this.terrains.Count != 0)
+            {
+                Stopwatch stopwatch = new Stopwatch();
+                TerrainInstance[] terrains;
+
+                if (terrainsArray == null || terrainsArray?.Length != this.terrains.Count || dirty)
                 {
-                    terr.Value.Tick();
+                    terrains = terrainsArray = this.terrains.Select(p => p.Value).ToArray();
+                    index = 0;
+                    dirty = false;
                 }
-                else if (terr.Value.def.tickerType == TickerType.Rare && Find.TickManager.TicksGame % 250 == 0)
+                else
                 {
-                    terr.Value.TickRare();
+                    terrains = terrainsArray;
                 }
-                else if (terr.Value.def.tickerType == TickerType.Long && Find.TickManager.TicksGame % 2000 == 0)
+                int i = index;
+                int k = 0;
+                while (stopwatch.ElapsedTicks < timeBudget && k < terrains.Length / 6)
                 {
-                    terr.Value.TickLong();
+                    if (i >= terrains.Length)
+                    {
+                        i = 0;
+                        cycles += 1;
+                    }
+                    var terr = terrains[i];
+                    if (ReGrowthSettings.FlashUpdateCell) map.debugDrawer.FlashCell(terr.Position);
+                    if (terr.def.tickerType == TickerType.Normal)
+                    {
+                        terr.Tick();
+                    }
+                    else if (terr.def.tickerType == TickerType.Rare && cycles % 35 == 0)
+                    {
+                        terr.TickRare();
+                    }
+                    else if (terr.def.tickerType == TickerType.Long && cycles % 250 == 0)
+                    {
+                        terr.TickLong();
+                    }
+                    i++;
+                    k++;
                 }
+                stopwatch.Stop();
+                index = i;
+                if (Prefs.DevMode && Prefs.LogVerbose) Log.Message(
+                    string.Format("ReGrowther: ticked {0} out of {1} in {2} ms and Cycled to {3}", k, terrains.Length, stopwatch.ElapsedMilliseconds, cycles));
             }
         }
-        
+
         public override void FinalizeInit()
         {
             base.FinalizeInit();
@@ -80,12 +124,13 @@ namespace ReGrowthCore
                 terrains[k].PostLoad();
             }
         }
-		
+
         /// <summary>
         /// Registers terrain currently present to terrain list, called on init
         /// </summary>
         public void RefreshAllCurrentTerrain()
         {
+            Reset();
             foreach (var cell in map) //Map is IEnumerable...
             {
                 TerrainDef terrain = map.terrainGrid.TerrainAt(cell);
@@ -96,27 +141,51 @@ namespace ReGrowthCore
             }
         }
 
-		public void RegisterAt(ActiveTerrainDef special, int i)
-		{
-			RegisterAt(special, map.cellIndices.IndexToCell(i));
-		}
+        public void RegisterAt(ActiveTerrainDef special, int i)
+        {
+            RegisterAt(special, map.cellIndices.IndexToCell(i));
+        }
 
-		public void RegisterAt(ActiveTerrainDef special, IntVec3 cell)
-		{
+        public void RegisterAt(ActiveTerrainDef special, IntVec3 cell)
+        {
             if (!terrains.ContainsKey(cell))
             {
                 var newTerr = special.MakeTerrainInstance(map, cell);
                 newTerr.Init();
+                terrainInstances.Add(newTerr);
                 terrains.Add(cell, newTerr);
                 this.terrainDefs.Add(special);
+                FixAt(terrainInstances.Count);
             }
         }
-        
+
         public void Notify_RemovedTerrainAt(IntVec3 c)
         {
-        	var terr = terrains[c];
-        	terrains.Remove(c);
-        	terr.PostRemove();
+            var terr = terrains[c];
+            var index = FixAt(terrainInstances.IndexOf(terr));
+            terrains.Remove(c);
+            terrainInstances.Remove(terr);
+            terrainsArray = terrainInstances.ToArray();
+            terr.PostRemove();
+
+        }
+
+        public int FixAt(int i = -1)
+        {
+            dirty = true;
+            if (i != -1)
+            {
+                if (i >= this.index)
+                    return i;
+                this.index = Mathf.Max(i - 1, 0);
+            }
+            return i;
+        }
+
+        public void Reset()
+        {
+            dirty = true;
+            index = 0;
         }
     }
 }

@@ -15,25 +15,27 @@ namespace ReGrowthCore
         public static bool SpawnFogOnHotSprings = true;
 
         public static bool ColdFog = true;
-        
+
         public static bool IceLayer = true;
-        
+
         public static bool RainWaterPuddles = true;
-        
+
         public static bool RainCleanWaterPuddles = false;
-        
+
         public static int FogVelocity = 12;
-        
+
         public static int FogTemp = 0;
-        
+
         public static int PuddleChance = 20;
 
+        public static bool FlashUpdateCell = false;
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref SpawnLeaves, "SpawnLeaves", true);
             Scribe_Values.Look(ref SpawnFogOnHotSprings, "SpawnFogOnHotSprings", true);
+            Scribe_Values.Look(ref FlashUpdateCell, "FlashUpdateCell", false);
             //Scribe_Values.Look(ref ColdFog, "ColdFog", true);
             //Scribe_Values.Look(ref IceLayer, "IceLayer", true);
             //Scribe_Values.Look(ref RainWaterPuddles, "RainWaterPuddles", true);
@@ -41,7 +43,6 @@ namespace ReGrowthCore
             //Scribe_Values.Look(ref FogVelocity, "FogVelocity");
             //Scribe_Values.Look(ref FogTemp, "FogTemp");
             //Scribe_Values.Look(ref PuddleChance, "PuddleChance");
-
         }
 
         // Draw the actual settings window that shows up after selecting Z-Levels in the list
@@ -51,6 +52,7 @@ namespace ReGrowthCore
             listingStandard.Begin(inRect);
             listingStandard.CheckboxLabeled("RG.SpawnLeaves".Translate(), ref SpawnLeaves);
             listingStandard.CheckboxLabeled("RG.SpawnFogOnHotSprings".Translate(), ref SpawnFogOnHotSprings);
+            listingStandard.CheckboxLabeled("DEBUG: Flash Ticks", ref FlashUpdateCell);
             //listingStandard.CheckboxLabeled("RG.ColdFog".Translate(), ref ColdFog);
             //listingStandard.CheckboxLabeled("RG.IceLayer".Translate(), ref IceLayer);
             //listingStandard.CheckboxLabeled("RG.RainWaterPuddles".Translate(), ref RainWaterPuddles);
