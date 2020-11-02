@@ -21,7 +21,7 @@
 				<instanceColor>(0.75,0.75,0.75)</instanceColor>
 				<reqTempRangeToSpawn>-200~15</reqTempRangeToSpawn>
 				<enableSettingsSpawnFogOnHotSprings>true</enableSettingsSpawnFogOnHotSprings>
-				<spawnChance>0.10</spawnChance>
+				<spawnChance>0.03</spawnChance>
 			</li>
 		</terrainComps>
     </ReGrowthCore.ActiveTerrainDef>

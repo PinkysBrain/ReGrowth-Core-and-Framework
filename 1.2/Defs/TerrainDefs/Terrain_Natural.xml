@@ -53,8 +53,7 @@
             <li>Heavy</li>
             <li>Diggable</li>
         </affordances>
-        <generatedFilth>Filth_Sand</generatedFilth>
-        <fertility>0.10</fertility>
+        <fertility>0.005</fertility>
         <takeFootprints>True</takeFootprints>
         <tools>
             <li>
