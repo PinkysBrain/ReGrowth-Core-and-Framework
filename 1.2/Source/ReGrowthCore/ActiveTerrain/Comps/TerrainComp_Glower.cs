@@ -71,6 +71,12 @@ namespace ReGrowthCore
             }
         }
 
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            this.parent.Map.glowGrid.DeRegisterGlower(this.AsThingComp);
+        }
+
         public override void Initialize(TerrainCompProperties props)
         {
             base.Initialize(props);
