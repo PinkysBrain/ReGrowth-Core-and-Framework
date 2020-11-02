@@ -1,8 +1,44 @@
-﻿using HarmonyLib;
+﻿using System.Diagnostics;
+using HarmonyLib;
+using UnityEngine;
 using Verse;
 
 namespace ReGrowthCore
 {
+    [HarmonyPatch(typeof(TickManager), nameof(TickManager.DoSingleTick))]
+    public static class DoSingleTick_Patch
+    {
+        static SpecialTerrainList[] terrainListers = new SpecialTerrainList[20];
+        static Map[] maps = new Map[20];
+
+        static void Prefix(out Stopwatch __state)
+        {
+            __state = new Stopwatch();
+            __state.Start();
+        }
+
+        static void Postfix(Stopwatch __state)
+        {
+            __state.Stop();
+            foreach (Map map in Find.Maps)
+            {
+                int index = map.Index;
+                SpecialTerrainList comp;
+                if (maps[index] != map)
+                {
+                    maps[index] = map;
+                    comp = terrainListers[index] = map.GetComponent<SpecialTerrainList>();
+                }
+                else
+                {
+                    comp = terrainListers[index];
+                }
+
+                comp.TerrainUpdate((long)(__state.ElapsedTicks * 0.25f));
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(TerrainGrid), "SetTerrain")]
     public static class _TerrainGrid
     {

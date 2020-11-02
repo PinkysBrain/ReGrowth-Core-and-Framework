@@ -43,8 +43,8 @@
         </statBases>
 		<terrainComps>
 			<li Class="ReGrowthCore.TerrainCompProperties_HeatPush">
-				<pushAmount>10</pushAmount>
-				<targetTemp>80</targetTemp>
+				<pushAmount>20</pushAmount>
+				<targetTemp>120</targetTemp>
 			</li>
 			<li Class="ReGrowthCore.TerrainCompProperties_Glower">
                 <glowRadius>4</glowRadius>
