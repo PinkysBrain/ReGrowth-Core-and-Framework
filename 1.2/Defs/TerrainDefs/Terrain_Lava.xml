@@ -48,7 +48,7 @@
 			</li>
 			<li Class="ReGrowthCore.TerrainCompProperties_Glower">
                 <glowRadius>4</glowRadius>
-                <glowColor>(178,58,0,0.5)</glowColor>
+                <glowColor>(178,58,0,0)</glowColor>
 			</li>
 		</terrainComps>
     </ReGrowthCore.ActiveTerrainDef>
