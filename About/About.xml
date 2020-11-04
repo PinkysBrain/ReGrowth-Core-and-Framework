@@ -13,7 +13,7 @@
         <li>
             <packageId>brrainz.harmony</packageId>
             <displayName>Harmony</displayName>
-            <downloadUrl>https://github.com/Helixien/ReGrowth-Core</downloadUrl>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld</downloadUrl>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2196278117</steamWorkshopUrl>
         </li>
     </modDependencies>
@@ -21,7 +21,7 @@
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>brrainz.harmony</li>
-		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>VanillaExpanded.VTEXE</li>
 	</loadAfter>
 	<loadBefore>
 		<li>Balthoraz.RimUniverse.BiomesModule</li>
