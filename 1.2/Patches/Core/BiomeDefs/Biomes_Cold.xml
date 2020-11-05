@@ -91,8 +91,8 @@
                     <value>
                         <wildPlants>
 							<Plant_Chokevine>3.0</Plant_Chokevine>
-							<Plant_Grass>1.0</Plant_Grass>
-							<Plant_TallGrass>2.4</Plant_TallGrass>
+							<Plant_Grass>15.0</Plant_Grass>
+							<Plant_TallGrass>2.5</Plant_TallGrass>
 							<Plant_Moss>3.0</Plant_Moss>
 							<Plant_Bush>0.3</Plant_Bush>
 							<Plant_Astragalus>0.1</Plant_Astragalus>
