@@ -18,13 +18,14 @@
         </li>
     </modDependencies>
 	<loadAfter>
+		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
-		<li>brrainz.harmony</li>
 		<li>VanillaExpanded.VTEXE</li>
 	</loadAfter>
 	<loadBefore>
 		<li>Balthoraz.RimUniverse.BiomesModule</li>
+		<li>VanillaExpanded.VPlantsE</li>
 	</loadBefore>
 
 </ModMetaData>
