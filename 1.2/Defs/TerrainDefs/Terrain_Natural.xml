@@ -67,4 +67,38 @@
         </tools>
     </TerrainDef>
 
+    <TerrainDef ParentName="NaturalTerrainBase">
+        <defName>RG_FrozenWaterShallow</defName>
+        <label>frozen shallow water</label>
+        <texturePath>Terrain/Surfaces/FrozenWaterShallow</texturePath>
+        <edgeType>FadeRough</edgeType>
+        <renderPrecedence>350</renderPrecedence>
+        <pathCost>18</pathCost>
+        <statBases>
+            <Beauty>-1</Beauty>
+        </statBases>
+        <scatterType>SoftGray</scatterType>
+        <affordances inherit="false" />
+        <generatedFilth>Filth_Dirt</generatedFilth>
+        <fertility>0.00</fertility>
+        <takeFootprints>True</takeFootprints>
+    </TerrainDef>
+
+    <TerrainDef ParentName="NaturalTerrainBase">
+        <defName>RG_FrozenWaterDeep</defName>
+        <label>frozen shallow water</label>
+        <texturePath>Terrain/Surfaces/FrozenWaterDeep</texturePath>
+        <edgeType>FadeRough</edgeType>
+        <renderPrecedence>350</renderPrecedence>
+        <pathCost>18</pathCost>
+        <statBases>
+            <Beauty>-1</Beauty>
+        </statBases>
+        <scatterType>SoftGray</scatterType>
+        <affordances inherit="false" />
+        <generatedFilth>Filth_Dirt</generatedFilth>
+        <fertility>0.00</fertility>
+        <takeFootprints>True</takeFootprints>
+    </TerrainDef>
+
 </Defs>
