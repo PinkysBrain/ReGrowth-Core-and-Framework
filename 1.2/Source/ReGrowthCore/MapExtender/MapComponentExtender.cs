@@ -11,6 +11,7 @@ using RimWorld.Planet;
 
 namespace ReGrowthCore
 {
+
     public class MapComponentExtender : MapComponent
     {
         public bool verifyFirstTime = true;
@@ -34,6 +35,88 @@ namespace ReGrowthCore
             {
                 this.DoMapSpawns();
             }
+            if (cachedTerrains == null)
+            {
+                cachedTerrains = new Dictionary<IntVec3, TerrainDef>();
+                foreach (var cell in map.AllCells)
+                {
+                    cachedTerrains[cell] = cell.GetTerrain(map);
+                }
+            }
+            if (listToUpdate == null)
+            {
+                listToUpdate = new List<IntVec3>();
+            }
+        }
+
+        private Dictionary<IntVec3, TerrainDef> cachedTerrains;
+        private List<IntVec3> listToUpdate = new List<IntVec3>();
+
+		public override void MapComponentTick()
+		{
+			base.MapComponentTick();
+            if (Find.TickManager.TicksGame % 30000 == 0)
+            {
+                foreach (var cell in map.AllCells)
+                {
+                    cachedTerrains[cell] = cell.GetTerrain(map);
+                }
+                listToUpdate.Clear();
+            }
+            else if (listToUpdate.Count > 0)
+            {
+                foreach (var cell in listToUpdate)
+                {
+                    cachedTerrains[cell] = cell.GetTerrain(map);
+                }
+                listToUpdate.Clear();
+            }
+            if (Find.TickManager.TicksGame % 30 == 0)
+            {
+                foreach (var terrainData in cachedTerrains.InRandomOrder())
+                {
+                    if (terrainData.Value == TerrainDefOf.WaterShallow)
+                    {
+                        var temp = terrainData.Key.GetTemperature(map);
+                        if (temp <= 0f)
+                        {
+                            if (FrozenWaterOrBeachNear(terrainData.Key))
+                            {
+                                map.terrainGrid.SetTerrain(terrainData.Key, RGDefOf.RG_FrozenWaterShallow);
+                                listToUpdate.Add(terrainData.Key);
+                                return;
+                            }
+                        }
+                    }
+                    else if (terrainData.Value == TerrainDefOf.WaterDeep)
+                    {
+                        var temp = terrainData.Key.GetTemperature(map);
+                        if (temp <= -20f)
+                        {
+                            if (FrozenWaterOrBeachNear(terrainData.Key))
+                            {
+                                map.terrainGrid.SetTerrain(terrainData.Key, RGDefOf.RG_FrozenWaterDeep);
+                                listToUpdate.Add(terrainData.Key);
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+
+		}
+
+        public bool FrozenWaterOrBeachNear(IntVec3 cell)
+        {
+            foreach (var otherCell in GenAdj.CellsAdjacentCardinal(cell, Rot4.North, IntVec2.One))
+            {
+                var terr = otherCell.GetTerrain(map);
+                if (terr == RGDefOf.RG_FrozenWaterDeep || terr == RGDefOf.RG_FrozenWaterShallow || !terr.IsWater)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool CanSpawnAt(IntVec3 c, ObjectSpawnsDef element)
