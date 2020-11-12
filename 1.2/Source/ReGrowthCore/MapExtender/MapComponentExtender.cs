@@ -110,10 +110,13 @@ namespace ReGrowthCore
         {
             foreach (var otherCell in GenAdj.CellsAdjacentCardinal(cell, Rot4.North, IntVec2.One))
             {
-                var terr = otherCell.GetTerrain(map);
-                if (terr == RGDefOf.RG_FrozenWaterDeep || terr == RGDefOf.RG_FrozenWaterShallow || !terr.IsWater)
+                if (otherCell.InBounds(map))
                 {
-                    return true;
+                    var terr = otherCell.GetTerrain(map);
+                    if (terr == RGDefOf.RG_FrozenWaterDeep || terr == RGDefOf.RG_FrozenWaterShallow || !terr.IsWater)
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
