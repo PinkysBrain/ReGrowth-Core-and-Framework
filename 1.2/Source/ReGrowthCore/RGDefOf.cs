@@ -21,9 +21,6 @@ namespace ReGrowthCore
 
         public static TerrainDef RG_Lava;
 
-		public static TerrainDef RG_FrozenWaterShallow;
-
-		public static TerrainDef RG_FrozenWaterDeep;
-	}
+    }
 }
 
