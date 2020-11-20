@@ -73,7 +73,7 @@
         <texturePath>Terrain/Surfaces/TundraSoil</texturePath>
         <edgeType>FadeRough</edgeType>
         <renderPrecedence>340</renderPrecedence>
-        <pathCost>2.5</pathCost>
+        <pathCost>2</pathCost>
         <statBases>
             <Beauty>-1</Beauty>
             <Cleanliness>-1</Cleanliness>
