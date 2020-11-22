@@ -41,6 +41,9 @@
             <Beauty>-3</Beauty>
             <Cleanliness>-4</Cleanliness>
         </statBases>
+		<affordances>
+			<li>RG_Lava</li>
+		</affordances>
 		<terrainComps>
 			<li Class="ReGrowthCore.TerrainCompProperties_HeatPush">
 				<pushAmount>20</pushAmount>
