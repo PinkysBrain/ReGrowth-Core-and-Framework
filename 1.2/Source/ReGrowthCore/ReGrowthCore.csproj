@@ -31,6 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0MultiplayerAPI, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\0MultiplayerAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +64,7 @@
     <Compile Include="Comps\CompTreeLeavesSpawner.cs" />
     <Compile Include="MapExtender\MapComponentExtender.cs" />
     <Compile Include="MapExtender\ObjectSpawnsDef.cs" />
+    <Compile Include="MultiplayerSupport.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="ReGrowthMod.cs" />
     <Compile Include="ReGrowthSettings.cs" />

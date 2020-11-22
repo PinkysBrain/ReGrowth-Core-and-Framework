@@ -63,7 +63,7 @@ namespace ReGrowthCore
             //listingStandard.Slider(FogTemp, -273, 0);
             //listingStandard.Label("RG.PuddleChance".Translate() + ": " + PuddleChance + "%");
             //listingStandard.Slider(PuddleChance, 0, 100);
-            //listingStandard.End();
+            listingStandard.End();
         }
 
     }
