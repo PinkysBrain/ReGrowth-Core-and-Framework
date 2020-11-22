@@ -48,5 +48,50 @@
 			</li>
 		</terrainComps>
     </ReGrowthCore.ActiveTerrainDef>
+	
+    <TerrainDef Abstract="True" Name="RG_ToxicWasteBase">
+        <edgeType>Water</edgeType>
+        <fertility>0</fertility>
+        <avoidWander>true</avoidWander>
+        <holdSnow>false</holdSnow>
+        <takeSplashes>true</takeSplashes>
+        <extinguishesFire>true</extinguishesFire>
+        <extraDeteriorationFactor>12</extraDeteriorationFactor>
+        <traversedThought>SoakingWet</traversedThought>
+        <extraNonDraftedPerceivedPathCost>50</extraNonDraftedPerceivedPathCost>
+        <extraDraftedPerceivedPathCost>50</extraDraftedPerceivedPathCost>
+        <filthAcceptanceMask>
+            <li>None</li>
+        </filthAcceptanceMask>
+        <tags>
+            <li>ToxixWaste</li>
+        </tags>
+    </TerrainDef>
+
+    <TerrainDef Abstract="True" Name="RG_ToxicWasteShallowBase" ParentName="RG_ToxicWasteBase">
+        <texturePath>Terrain/Surfaces/ToxicWasteRamp</texturePath>
+        <waterDepthShader>Map/WaterDepth</waterDepthShader>
+        <pathCost>55</pathCost>
+        <changeable>true</changeable>
+        <generatedFilth>Filth_Dirt</generatedFilth>
+        <takeFootprints>True</takeFootprints>
+        <extinguishesFire>true</extinguishesFire>
+        <avoidWander>true</avoidWander>
+        <affordances>
+            <li>Bridgeable</li>
+            <li>ShallowWater</li>
+        </affordances>
+    </TerrainDef>
+
+    <TerrainDef ParentName="RG_ToxicWasteShallowBase">
+        <defName>RG_ToxicWaste</defName>
+        <label>toxic waste</label>
+        <renderPrecedence>395</renderPrecedence>
+        <driesTo>RG_DepletedGravel</driesTo>
+        <statBases>
+            <Beauty>-6</Beauty>
+            <Cleanliness>-8</Cleanliness>
+        </statBases>
+    </TerrainDef>
 
 </Defs>
