@@ -23,6 +23,12 @@
                         </comps>
                     </value>
                 </li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Chokevine"]/plant/leaflessGraphicPath</xpath>
+					<value>
+						<leaflessGraphicPath>Things/Plant/Leafless/Chokevine_Leafless</leaflessGraphicPath>
+					</value>
+				</li>
             </operations>
         </match>
     </Operation>

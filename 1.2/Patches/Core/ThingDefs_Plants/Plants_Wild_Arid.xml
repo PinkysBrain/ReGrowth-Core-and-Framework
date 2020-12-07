@@ -9,9 +9,9 @@
             <success>Always</success>
             <operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="Plant_Brambles"]/plant/leaflessGraphicPath</xpath>
+					<xpath>/Defs/ThingDef[defName="SaguaroCactus"]/plant/leaflessGraphicPath</xpath>
 					<value>
-						<leaflessGraphicPath>Things/Plant/Leafless/Brambles_Leafless</leaflessGraphicPath>
+						<leaflessGraphicPath>Things/Plant/Leafless/SaguaroCactus_Leafless</leaflessGraphicPath>
 					</value>
 				</li>
             </operations>
