@@ -14,6 +14,18 @@
 						<leaflessGraphicPath>Things/Plant/Leafless/SaguaroCactus_Leafless</leaflessGraphicPath>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Plant_Agave"]/plant</xpath>
+					<value>
+						<leaflessGraphicPath>Things/Plant/Leafless/Agave_Leafless</leaflessGraphicPath>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Agave"]/plant/visualSizeRange</xpath>
+					<value>
+						<visualSizeRange>0.6~1.0</visualSizeRange>
+					</value>
+				</li>
             </operations>
         </match>
     </Operation>
