@@ -12,7 +12,7 @@
 					<xpath>/Defs/ThingDef[defName="Plant_Healroot"]</xpath>
 					<value>
 						    <graphicData>
-								<texPath>Things/Plant/HealrootCultivated</texPath>
+								<texPath>Things/Plant/CultivatedHealroot</texPath>
 							</graphicData>
 					</value>
 				</li>
