@@ -8,10 +8,10 @@
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				<li Class="PatchOperationReplace">
+				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThoughtDef[defName="SoakingWet"]</xpath>
 					<value>
-						<nextThought>RG_ExtremelyWet</nextThought>
+						<nextThought>RG_Wet</nextThought>
 					</value>
 				</li>
 			</operations>

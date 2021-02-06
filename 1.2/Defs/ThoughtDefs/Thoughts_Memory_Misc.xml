@@ -5,7 +5,6 @@
 		<defName>RG_Wet</defName>
 		<durationDays>0.1</durationDays>
 		<stackLimit>1</stackLimit>
-		<nextThought>SoakingWet</nextThought>
 		<stages>
 			<li>
 				<label>wet</label>
@@ -19,6 +18,7 @@
 		<defName>RG_ExtremelyWet</defName>
 		<durationDays>0.3</durationDays>
 		<stackLimit>1</stackLimit>
+		<nextThought>SoakingWet</nextThought>
 		<stages>
 			<li>
 				<label>extremely wet</label>
