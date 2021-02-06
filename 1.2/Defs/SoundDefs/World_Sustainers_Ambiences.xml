@@ -9,7 +9,6 @@
     <priorityMode>PrioritizeNearest</priorityMode>  
     <subSounds>
       <li>
-		<onCamera>True</onCamera>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>Ambience/Amb_DustDevil_Loop</clipPath>
@@ -18,7 +17,7 @@
         <volumeRange>70~70</volumeRange>
         <sustainAttack>2.5</sustainAttack>      
         <sustainRelease>2.5</sustainRelease>
-        <distRange><min>100</min><max>200</max></distRange>
+        <distRange>10~20</distRange>
       </li>
     </subSounds>
   </SoundDef>
