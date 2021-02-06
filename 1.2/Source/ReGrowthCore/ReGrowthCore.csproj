@@ -62,6 +62,7 @@
     <Compile Include="ActiveTerrain\ThingComps.cs" />
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
     <Compile Include="Comps\CompTreeLeavesSpawner.cs" />
+    <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
     <Compile Include="MapExtender\MapComponentExtender.cs" />
     <Compile Include="MapExtender\ObjectSpawnsDef.cs" />
     <Compile Include="MultiplayerSupport.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="ReGrowthMod.cs" />
     <Compile Include="ReGrowthSettings.cs" />
     <Compile Include="RGDefOf.cs" />
+    <Compile Include="Things\DevilDust_Tornado.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Blizzard.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Overcast.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Monsoon.cs" />

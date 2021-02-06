@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RG_DevilDusts</defName>
+		<label>devil dusts</label>
+		<letterLabel>Devil dusts</letterLabel>
+		<letterText>Devil dusts</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>ReGrowthCore.IncidentWorker_DevilDusts</workerClass>
+		<baseChance>1.0</baseChance>
+	</IncidentDef>
+</Defs>

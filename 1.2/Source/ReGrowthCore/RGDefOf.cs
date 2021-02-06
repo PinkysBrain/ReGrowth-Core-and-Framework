@@ -21,6 +21,9 @@ namespace ReGrowthCore
 
         public static TerrainDef RG_Lava;
 
-    }
+		public static ThingDef RG_DustDevil;
+
+		public static ThingDef RG_Mote_DevilDustPuff;
+	}
 }
 
