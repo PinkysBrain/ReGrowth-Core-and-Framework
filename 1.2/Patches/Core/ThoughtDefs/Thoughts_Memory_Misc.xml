@@ -8,10 +8,14 @@
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/ThoughtDef[defName="SoakingWet"]</xpath>
 					<value>
-						<nextThought>RG_Wet</nextThought>
+						<li Class="ReGrowthCore.ThoughtExtensions">
+							<removeThoughtsWhenAdded>
+								<li>RG_Wet</li>
+							</removeThoughtsWhenAdded>
+						</li>
 					</value>
 				</li>
 			</operations>

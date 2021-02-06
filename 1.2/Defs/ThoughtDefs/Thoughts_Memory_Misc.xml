@@ -18,7 +18,6 @@
 		<defName>RG_ExtremelyWet</defName>
 		<durationDays>0.3</durationDays>
 		<stackLimit>1</stackLimit>
-		<nextThought>SoakingWet</nextThought>
 		<stages>
 			<li>
 				<label>extremely wet</label>
@@ -26,6 +25,14 @@
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>
+		<modExtensions>
+			<li Class="ReGrowthCore.ThoughtExtensions">
+				<removeThoughtsWhenAdded>
+					<li>RG_Wet</li>
+					<li>SoakingWet</li>
+				</removeThoughtsWhenAdded>
+			</li>
+		</modExtensions>
 	</ThoughtDef>
 
 	<ThoughtDef>
