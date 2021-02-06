@@ -9,4 +9,6 @@
     <RG.FogTemp>Fog temperature</RG.FogTemp>
     <RG.PuddleChance>Puddle spawn chance</RG.PuddleChance>
 	<RG.SpawnFogOnHotSprings>Spawn fogs on hot springs</RG.SpawnFogOnHotSprings>
+	
+	<RG.SandDevilLeftTheMap>The sand devil has left the map.</RG.SandDevilLeftTheMap>
 </LanguageData>
