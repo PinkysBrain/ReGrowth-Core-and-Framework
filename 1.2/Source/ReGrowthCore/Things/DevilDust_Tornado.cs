@@ -177,13 +177,13 @@ namespace ReGrowthCore
 					//float num = Rand.Range(0.6f, 1f);
 					Vector3 a = new Vector3(realPosition.x, 0f, realPosition.y);
 					a.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-					ThrowDevilDustPuff(a + Vector3Utility.RandomHorizontalOffset(1.5f), base.Map, Rand.Range(1.5f, 3f), new ColorInt(255, 165, 0).ToColor);
+					ThrowDevilDustPuff(a + Vector3Utility.RandomHorizontalOffset(1.5f), base.Map, Rand.Range(1.5f, 3f), new ColorInt(235, 184, 123).ToColor);
 				}
 			}
 			else
 			{
 				leftFadeOutTicks = 120;
-				Messages.Message("MessageTornadoLeftMap".Translate(), new TargetInfo(base.Position, base.Map), MessageTypeDefOf.PositiveEvent);
+				Messages.Message("RG.SandDevilLeftTheMap".Translate(), new TargetInfo(base.Position, base.Map), MessageTypeDefOf.PositiveEvent);
 			}
 		}
 
@@ -216,7 +216,7 @@ namespace ReGrowthCore
 		{
 			int ticksGame = Find.TickManager.TicksGame;
 			float num = 1f / distanceFromCenter;
-			float num2 = 15f * speedMultiplier * num;
+			float num2 = 5f * speedMultiplier * num;
 			float num3 = (initialAngle + (float)ticksGame * num2) % 360f;
 			Vector2 vector = realPosition.Moved(num3, AdjustedDistanceFromCenter(distanceFromCenter));
 			vector.y += distanceFromCenter * 4f;
@@ -371,8 +371,7 @@ namespace ReGrowthCore
 						damageFactor *= 1.7f;
 						break;
 				}
-				int num = Mathf.Max(GenMath.RoundRandom(5f * damageFactor), 1);
-				tmpThings[i].TakeDamage(new DamageInfo(DamageDefOf.TornadoScratch, num, 0f, angle, this)).AssociateWithLog(battleLogEntry_DamageTaken);
+				tmpThings[i].TakeDamage(new DamageInfo(DamageDefOf.TornadoScratch, 1f * damageFactor, 0f, angle, this)).AssociateWithLog(battleLogEntry_DamageTaken);
 			}
 			tmpThings.Clear();
 		}
