@@ -205,7 +205,7 @@ namespace ReGrowthCore
 		{
 			Rand.PushState();
 			Rand.Seed = thingIDNumber;
-			for (int i = 0; i < 180; i++)
+			for (int i = 0; i < 90; i++)
 			{
 				DrawTornadoPart(PartsDistanceFromCenter.RandomInRange, Rand.Range(0f, 360f), Rand.Range(0.9f, 1.1f), Rand.Range(0.52f, 0.88f));
 			}
@@ -216,7 +216,7 @@ namespace ReGrowthCore
 		{
 			int ticksGame = Find.TickManager.TicksGame;
 			float num = 1f / distanceFromCenter;
-			float num2 = 25f * speedMultiplier * num;
+			float num2 = 15f * speedMultiplier * num;
 			float num3 = (initialAngle + (float)ticksGame * num2) % 360f;
 			Vector2 vector = realPosition.Moved(num3, AdjustedDistanceFromCenter(distanceFromCenter));
 			vector.y += distanceFromCenter * 4f;
@@ -260,7 +260,7 @@ namespace ReGrowthCore
 			LongEventHandler.ExecuteWhenFinished(delegate
 			{
 				SoundDef tornado = SoundDefOf.Tornado;
-				sustainer = tornado.TrySpawnSustainer(SoundInfo.InMap(this, MaintenanceType.PerTick));
+				sustainer = tornado.TrySpawnSustainer(SoundInfo.OnCamera());
 				UpdateSustainerVolume();
 			});
 		}
@@ -371,7 +371,7 @@ namespace ReGrowthCore
 						damageFactor *= 1.7f;
 						break;
 				}
-				int num = Mathf.Max(GenMath.RoundRandom(30f * damageFactor), 1);
+				int num = Mathf.Max(GenMath.RoundRandom(5f * damageFactor), 1);
 				tmpThings[i].TakeDamage(new DamageInfo(DamageDefOf.TornadoScratch, num, 0f, angle, this)).AssociateWithLog(battleLogEntry_DamageTaken);
 			}
 			tmpThings.Clear();
