@@ -259,8 +259,8 @@ namespace ReGrowthCore
 		{
 			LongEventHandler.ExecuteWhenFinished(delegate
 			{
-				SoundDef tornado = SoundDefOf.Tornado;
-				sustainer = tornado.TrySpawnSustainer(SoundInfo.OnCamera());
+				SoundDef tornado = RGDefOf.RG_Ambient_DustDevil;
+				sustainer = tornado.TrySpawnSustainer(SoundInfo.OnCamera(MaintenanceType.PerTick));
 				UpdateSustainerVolume();
 			});
 		}
