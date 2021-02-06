@@ -9,9 +9,9 @@
 			<success>Always</success>
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/TerrainDef[defName = "Sand"]/fertility</xpath>
+					<xpath>/Defs/ThoughtDef[defName="SoakingWet"]</xpath>
 					<value>
-						<fertility>0</fertility>
+						<nextThought>RG_ExtremelyWet</nextThought>
 					</value>
 				</li>
 			</operations>

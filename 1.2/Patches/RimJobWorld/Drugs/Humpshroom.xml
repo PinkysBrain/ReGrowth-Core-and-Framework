@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Core</li>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Core</li>
 			<li>RimJobWorld</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="HumpShroom"]/label</xpath>
 					<value>
@@ -27,8 +27,8 @@
 						<texPath>Things/Item/Drug/HumpshroomCollected</texPath>
 					</value>
 				</li>
-            </operations>
-        </match>
-    </Operation>
+			</operations>
+		</match>
+	</Operation>
 
 </Patch>

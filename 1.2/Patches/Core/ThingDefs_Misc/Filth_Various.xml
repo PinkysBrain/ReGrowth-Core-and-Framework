@@ -1,73 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationConditional">
-        <success>Always</success>
-        <xpath>/Defs/ThingDef[@Name = "BaseFilth"]/filth/rainWashes</xpath>
-        <nomatch Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[@Name = "BaseFilth"]/filth</xpath>
-            <value>
-                <disappearsInDays>14~15</disappearsInDays>
-                <rainWashes>true</rainWashes>
-            </value>
-        </nomatch>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[@Name = "BaseFilth"]/filth</xpath>
-            <value>
-                <disappearsInDays>14~15</disappearsInDays>
-            </value>
-        </match>
-    </Operation>
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ThingDef[@Name = "BaseFilth"]/filth/rainWashes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name = "BaseFilth"]/filth</xpath>
+			<value>
+				<disappearsInDays>14~15</disappearsInDays>
+				<rainWashes>true</rainWashes>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name = "BaseFilth"]/filth</xpath>
+			<value>
+				<disappearsInDays>14~15</disappearsInDays>
+			</value>
+		</match>
+	</Operation>
 
-    <Operation Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_RubbleRock"]/filth/rainWashes</xpath>
-                <value>
-                    <rainWashes>false</rainWashes>
-                </value>
-            </li>
-            <li Class="PatchOperationRemove">
-                <xpath>/Defs/ThingDef[defName = "Filth_RubbleRock"]/filth/disappearsInDays</xpath>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_RubbleBuilding"]/filth/rainWashes</xpath>
-                <value>
-                    <rainWashes>false</rainWashes>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_RubbleBuilding"]/filth/disappearsInDays</xpath>
-                <value>
-                    <disappearsInDays>90~125</disappearsInDays>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_SlagRubble"]/filth/rainWashes</xpath>
-                <value>
-                    <rainWashes>false</rainWashes>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_SlagRubble"]/filth/disappearsInDays</xpath>
-                <value>
-                    <disappearsInDays>30~60</disappearsInDays>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_SandbagRubble"]/filth/rainWashes</xpath>
-                <value>
-                    <rainWashes>false</rainWashes>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName = "Filth_SlagRubble"]/filth/disappearsInDays</xpath>
-                <value>
-                    <disappearsInDays>30~60</disappearsInDays>
-                </value>
-            </li>
-        </operations>
-    </Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_RubbleRock"]/filth/rainWashes</xpath>
+				<value>
+					<rainWashes>false</rainWashes>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "Filth_RubbleRock"]/filth/disappearsInDays</xpath>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_RubbleBuilding"]/filth/rainWashes</xpath>
+				<value>
+					<rainWashes>false</rainWashes>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_RubbleBuilding"]/filth/disappearsInDays</xpath>
+				<value>
+					<disappearsInDays>90~125</disappearsInDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_SlagRubble"]/filth/rainWashes</xpath>
+				<value>
+					<rainWashes>false</rainWashes>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_SlagRubble"]/filth/disappearsInDays</xpath>
+				<value>
+					<disappearsInDays>30~60</disappearsInDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_SandbagRubble"]/filth/rainWashes</xpath>
+				<value>
+					<rainWashes>false</rainWashes>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_SlagRubble"]/filth/disappearsInDays</xpath>
+				<value>
+					<disappearsInDays>30~60</disappearsInDays>
+				</value>
+			</li>
+		</operations>
+	</Operation>
 
 </Patch>

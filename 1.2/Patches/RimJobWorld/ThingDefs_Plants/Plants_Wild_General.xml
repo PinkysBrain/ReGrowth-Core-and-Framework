@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Core</li>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Core</li>
 			<li>RimJobWorld</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="PlantHumpShroom"]/label</xpath>
 					<value>
@@ -36,13 +36,13 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="PlantHumpShroom"]/plant</xpath>
 					<value>
-					<maxMeshCount>9</maxMeshCount>
-					<wildClusterRadius>6</wildClusterRadius>
-					<wildClusterWeight>0.5</wildClusterWeight>
+						<maxMeshCount>9</maxMeshCount>
+						<wildClusterRadius>6</wildClusterRadius>
+						<wildClusterWeight>0.5</wildClusterWeight>
 					</value>
 				</li>
-            </operations>
-        </match>
-    </Operation>
+			</operations>
+		</match>
+	</Operation>
 
 </Patch>

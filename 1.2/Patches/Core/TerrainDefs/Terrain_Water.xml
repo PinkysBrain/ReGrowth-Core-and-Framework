@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	
+
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-		  <li>Core</li>
+			<li>Core</li>
 		</mods>
 
 		<!-- ============================ Animated Marsh ========================== -->
@@ -13,46 +13,46 @@
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/TerrainDef[defName="Marsh"]/waterDepthShader</xpath>
 					<match Class="PatchOperationReplace">
-					   <xpath>/Defs/TerrainDef[defName="Marsh"]/waterDepthShader</xpath>
-					   <value>
+						<xpath>/Defs/TerrainDef[defName="Marsh"]/waterDepthShader</xpath>
+						<value>
 							<waterDepthShader>Map/WaterDepth</waterDepthShader>
-					   </value>
+						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
-					   <xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
-					   <value>
+						<xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
+						<value>
 							<waterDepthShader>Map/WaterDepth</waterDepthShader>
-					   </value>
+						</value>
 					</nomatch>
 				</li>
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/TerrainDef[defName="Marsh"]/takeSplashes</xpath>
 					<match Class="PatchOperationReplace">
-					   <xpath>/Defs/TerrainDef[defName="Marsh"]/takeSplashes</xpath>
-					   <value>
+						<xpath>/Defs/TerrainDef[defName="Marsh"]/takeSplashes</xpath>
+						<value>
 							<takeSplashes>true</takeSplashes>
-					   </value>
+						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
-					   <xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
-					   <value>
+						<xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
+						<value>
 							<takeSplashes>true</takeSplashes>
-					   </value>
+						</value>
 					</nomatch>
 				</li>
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/TerrainDef[defName="Marsh"]/edgeType</xpath>
 					<match Class="PatchOperationReplace">
-					   <xpath>/Defs/TerrainDef[defName="Marsh"]/edgeType</xpath>
-					   <value>
+						<xpath>/Defs/TerrainDef[defName="Marsh"]/edgeType</xpath>
+						<value>
 							<edgeType>Water</edgeType>
-					   </value>
+						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
-					   <xpath>/Defs/TerrainDef[defName="Marsh"]/edgeType</xpath>
-					   <value>
+						<xpath>/Defs/TerrainDef[defName="Marsh"]/edgeType</xpath>
+						<value>
 							<edgeType>Water</edgeType>
-					   </value>
+						</value>
 					</nomatch>
 				</li>
 			</operations>
