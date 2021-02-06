@@ -177,7 +177,7 @@ namespace ReGrowthCore
 					//float num = Rand.Range(0.6f, 1f);
 					Vector3 a = new Vector3(realPosition.x, 0f, realPosition.y);
 					a.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-					ThrowDevilDustPuff(a + Vector3Utility.RandomHorizontalOffset(1.5f), base.Map, Rand.Range(1.5f, 3f), new ColorInt(189, 143, 93).ToColor);
+					ThrowDevilDustPuff(a + Vector3Utility.RandomHorizontalOffset(1.5f), base.Map, Rand.Range(1.5f, 3f), new ColorInt(188, 155, 114).ToColor);
 				}
 			}
 			else
