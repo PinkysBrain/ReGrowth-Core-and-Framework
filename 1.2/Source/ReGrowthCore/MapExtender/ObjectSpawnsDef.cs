@@ -16,9 +16,7 @@ namespace ReGrowthCore
         public IntRange numberToSpawn;
         public List<string> terrainValidationAllowed;
         public List<string> terrainValidationDisallowed;
-        public string allowedBiome;
-        public List<string> biomesWithExtraGeneration;
-        public int extraGeneration = 0;
+        public List<BiomeDef> allowedBiomes;
         public string disallowedBiome;
         public bool findCellsOutsideColony = false;
     }

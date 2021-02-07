@@ -13,20 +13,13 @@
 			<li>SoilRich</li>
 			<li>Gravel</li>
 		</terrainValidationAllowed>
-		<biomesWithExtraGeneration>
+		<allowedBiomes>
 			<li>TemperateForest</li>
 			<li>TemperateSwamp</li>
 			<li>BorealForest</li>
 			<li>Tundra</li>
 			<li>ColdBog</li>
-		</biomesWithExtraGeneration>
-		<allowedBiome>
-			<li>TemperateForest</li>
-			<li>TemperateSwamp</li>
-			<li>BorealForest</li>
-			<li>Tundra</li>
-			<li>ColdBog</li>
-		</allowedBiome>
+		</allowedBiomes>
 	</ReGrowthCore.ObjectSpawnsDef>
 
 </Defs>

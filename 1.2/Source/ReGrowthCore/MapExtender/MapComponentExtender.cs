@@ -94,21 +94,13 @@ namespace ReGrowthCore
         }
         public void DoMapSpawns()
         {
-            foreach (ObjectSpawnsDef element in DefDatabase<ObjectSpawnsDef>.AllDefs.Where(element => element.allowedBiome == map.Biome.defName))
+
+            foreach (ObjectSpawnsDef element in DefDatabase<ObjectSpawnsDef>.AllDefs.Where(element => element.allowedBiomes.Contains(map.Biome)))
             {
                 IEnumerable<IntVec3> tmpTerrain = map.AllCells.InRandomOrder();
-                int extraGeneration = 0;
-                foreach (string biome in element.biomesWithExtraGeneration)
-                {
-                    if (map.Biome.defName == biome)
-                    {
-                        extraGeneration = element.extraGeneration;
-                    }
-                }
-
                 if (spawnCounter == 0)
                 {
-                    spawnCounter = Rand.RangeInclusive(element.numberToSpawn.min, element.numberToSpawn.max) + extraGeneration;
+                    spawnCounter = element.numberToSpawn.RandomInRange;
                 }
                 foreach (IntVec3 c in tmpTerrain)
                 {
