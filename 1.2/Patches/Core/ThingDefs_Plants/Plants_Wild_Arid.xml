@@ -21,12 +21,34 @@
 							<harvestYield>15</harvestYield>
 							<harvestMinGrowth>0.2</harvestMinGrowth>
 							<harvestedThingDef>RG_RawCactus</harvestedThingDef>
-							<harvestYield>25</harvestYield>
 							<harvestTag>Standard</harvestTag>
 							<soundHarvesting>Harvest_Standard</soundHarvesting>
 							<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
 							<topWindExposure>0.08</topWindExposure>
 							<wildClusterRadius>-1</wildClusterRadius>
+						</plant>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_PincushionCactus"]/plant</xpath>
+					<value>
+						<plant>
+							<fertilityMin>0.05</fertilityMin>
+							<fertilitySensitivity>0</fertilitySensitivity>
+							<growDays>2.5</growDays>
+							<visualSizeRange>0.40~0.65</visualSizeRange>
+							<harvestWork>120</harvestWork>
+							<harvestYield>5</harvestYield>
+							<harvestMinGrowth>0.2</harvestMinGrowth>
+							<harvestedThingDef>RG_RawCactus</harvestedThingDef>
+							<harvestTag>Standard</harvestTag>
+							<soundHarvesting>Harvest_Standard</soundHarvesting>
+							<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+							<topWindExposure>0.0</topWindExposure>
+							<wildClusterRadius>4</wildClusterRadius>
+							<wildClusterWeight>4</wildClusterWeight>
+							<maxMeshCount>4</maxMeshCount>
+							<wildOrder>2</wildOrder>
 						</plant>
 					</value>
 				</li>
