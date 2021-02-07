@@ -17,7 +17,7 @@
 				<volumeRange>70~70</volumeRange>
 				<sustainAttack>2.5</sustainAttack>      
 				<sustainRelease>2.5</sustainRelease>
-				<distRange>10~20</distRange>
+				<distRange>0~20</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>

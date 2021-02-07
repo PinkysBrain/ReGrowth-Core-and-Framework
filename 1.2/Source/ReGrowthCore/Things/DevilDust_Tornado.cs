@@ -145,8 +145,12 @@ namespace ReGrowthCore
 			{
 				directionNoise = new Perlin(0.0020000000949949026, 2.0, 0.5, 4, 1948573612, QualityMode.Medium);
 			}
-			direction += (float)directionNoise.GetValue(Find.TickManager.TicksAbs, (float)(thingIDNumber % 500) * 1000f, 0.0) * 0.78f;
-			realPosition = realPosition.Moved(direction, 17f / 600f);
+			direction += (float)directionNoise.GetValue(Find.TickManager.TicksAbs, (float)(thingIDNumber % 500) * 1000f, 0.0) * 0.78f; ;
+			var movedPosition = realPosition.Moved(direction, 17f / 600f);
+			if (!new Vector3(movedPosition.x, 0f, movedPosition.y).ToIntVec3().Roofed(this.Map))
+            {
+				realPosition = movedPosition;
+			}
 			IntVec3 intVec = new Vector3(realPosition.x, 0f, realPosition.y).ToIntVec3();
 			if (intVec.InBounds(base.Map))
 			{
@@ -159,17 +163,17 @@ namespace ReGrowthCore
 				{
 					DamageFarThings();
 				}
-				if (this.IsHashIntervalTick(20))
-				{
-					DestroyRoofs();
-				}
+				//if (this.IsHashIntervalTick(20))
+				//{
+				//	DestroyRoofs();
+				//}
 				if (ticksLeftToDisappear > 0)
 				{
 					ticksLeftToDisappear--;
 					if (ticksLeftToDisappear == 0)
 					{
 						leftFadeOutTicks = 120;
-						Messages.Message("MessageTornadoDissipated".Translate(), new TargetInfo(base.Position, base.Map), MessageTypeDefOf.PositiveEvent);
+						Messages.Message("RG.SandDevilDissipated".Translate(), new TargetInfo(base.Position, base.Map), MessageTypeDefOf.PositiveEvent);
 					}
 				}
 				if (this.IsHashIntervalTick(4) && !CellImmuneToDamage(base.Position))
@@ -260,14 +264,14 @@ namespace ReGrowthCore
 			LongEventHandler.ExecuteWhenFinished(delegate
 			{
 				SoundDef tornado = RGDefOf.RG_Ambient_DustDevil;
-				sustainer = tornado.TrySpawnSustainer(SoundInfo.InMap(this, MaintenanceType.PerTick));
+				sustainer = tornado.TrySpawnSustainer(SoundInfo.InMap(this));
 				UpdateSustainerVolume();
 			});
 		}
 
 		private void DamageCloseThings()
 		{
-			int num = GenRadial.NumCellsInRadius(4.2f);
+			int num = GenRadial.NumCellsInRadius(1.2f);
 			for (int i = 0; i < num; i++)
 			{
 				IntVec3 intVec = base.Position + GenRadial.RadialPattern[i];
@@ -285,7 +289,7 @@ namespace ReGrowthCore
 
 		private void DamageFarThings()
 		{
-			IntVec3 c = (from x in GenRadial.RadialCellsAround(base.Position, 10f, useCenter: true)
+			IntVec3 c = (from x in GenRadial.RadialCellsAround(base.Position, 4, useCenter: true)
 						 where x.InBounds(base.Map)
 						 select x).RandomElement();
 			if (!CellImmuneToDamage(c))
@@ -294,28 +298,28 @@ namespace ReGrowthCore
 			}
 		}
 
-		private void DestroyRoofs()
-		{
-			removedRoofsTmp.Clear();
-			foreach (IntVec3 item in from x in GenRadial.RadialCellsAround(base.Position, 4.2f, useCenter: true)
-									 where x.InBounds(base.Map)
-									 select x)
-			{
-				if (!CellImmuneToDamage(item) && item.Roofed(base.Map))
-				{
-					RoofDef roof = item.GetRoof(base.Map);
-					if (!roof.isThickRoof && !roof.isNatural)
-					{
-						RoofCollapserImmediate.DropRoofInCells(item, base.Map);
-						removedRoofsTmp.Add(item);
-					}
-				}
-			}
-			if (removedRoofsTmp.Count > 0)
-			{
-				RoofCollapseCellsFinder.CheckCollapseFlyingRoofs(removedRoofsTmp, base.Map, removalMode: true);
-			}
-		}
+		//private void DestroyRoofs()
+		//{
+		//	removedRoofsTmp.Clear();
+		//	foreach (IntVec3 item in from x in GenRadial.RadialCellsAround(base.Position, 4.2f, useCenter: true)
+		//							 where x.InBounds(base.Map)
+		//							 select x)
+		//	{
+		//		if (!CellImmuneToDamage(item) && item.Roofed(base.Map))
+		//		{
+		//			RoofDef roof = item.GetRoof(base.Map);
+		//			if (!roof.isThickRoof && !roof.isNatural)
+		//			{
+		//				RoofCollapserImmediate.DropRoofInCells(item, base.Map);
+		//				removedRoofsTmp.Add(item);
+		//			}
+		//		}
+		//	}
+		//	if (removedRoofsTmp.Count > 0)
+		//	{
+		//		RoofCollapseCellsFinder.CheckCollapseFlyingRoofs(removedRoofsTmp, base.Map, removalMode: true);
+		//	}
+		//}
 
 		private bool CellImmuneToDamage(IntVec3 c)
 		{
@@ -362,10 +366,10 @@ namespace ReGrowthCore
 							break;
 						}
 					case ThingCategory.Building:
-						damageFactor *= 0.8f;
+						damageFactor = 0f;
 						break;
 					case ThingCategory.Item:
-						damageFactor *= 0.68f;
+						damageFactor = 0f;
 						break;
 					case ThingCategory.Plant:
 						damageFactor *= 1.7f;
