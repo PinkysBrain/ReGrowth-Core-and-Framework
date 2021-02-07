@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RG_AncientGraveFull</defName>
+		<label>ancient grave</label>
+		<description>An ancient final resting place of a long dead person.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Ruins/AncientGraveFull/AncientGraveFull</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,4)</drawSize>
+		</graphicData>
+		<constructEffect>ConstructDirt</constructEffect>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<size>(1,2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+		</statBases>
+		<passability>Standable</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<expandHomeArea>false</expandHomeArea>
+			<isInert>true</isInert>
+			<preventDeteriorationInside>true</preventDeteriorationInside>
+		</building>
+		<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+	</ThingDef>
+
+</Defs>

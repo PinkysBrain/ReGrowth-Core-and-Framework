@@ -14,6 +14,7 @@
 						<li Class="ReGrowthCore.ThoughtExtensions">
 							<removeThoughtsWhenAdded>
 								<li>RG_Wet</li>
+								<li>RG_ExtremelyWet</li>
 							</removeThoughtsWhenAdded>
 						</li>
 					</value>

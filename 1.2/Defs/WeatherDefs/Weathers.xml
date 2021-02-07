@@ -258,6 +258,8 @@
 			<li>Ambient_Rain</li>
 		</ambientSounds>
 		<overlayClasses>
+			<li>WeatherOverlay_Fog</li>
+			<li>WeatherOverlay_Rain</li>
 			<li>ReGrowthCore.WeatherOverlay_Monsoon</li>
 		</overlayClasses>
 		<!-- Colors are Overcast -->

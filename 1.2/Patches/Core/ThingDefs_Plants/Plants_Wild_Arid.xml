@@ -9,9 +9,25 @@
 			<success>Always</success>
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="SaguaroCactus"]/plant/leaflessGraphicPath</xpath>
+					<xpath>/Defs/ThingDef[defName="Plant_SaguaroCactus"]/plant</xpath>
 					<value>
-						<leaflessGraphicPath>Things/Plant/Leafless/SaguaroCactus_Leafless</leaflessGraphicPath>
+						<plant>
+							<lifespanDaysPerGrowDays>40</lifespanDaysPerGrowDays>
+							<fertilityMin>0.05</fertilityMin>
+							<fertilitySensitivity>0</fertilitySensitivity>
+							<growDays>5</growDays>
+							<leaflessGraphicPath>Things/Plant/Leafless/SaguaroCactus_Leafless</leaflessGraphicPath>
+							<harvestWork>300</harvestWork>
+							<harvestYield>15</harvestYield>
+							<harvestMinGrowth>0.2</harvestMinGrowth>
+							<harvestedThingDef>RG_RawCactus</harvestedThingDef>
+							<harvestYield>25</harvestYield>
+							<harvestTag>Standard</harvestTag>
+							<soundHarvesting>Harvest_Standard</soundHarvesting>
+							<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+							<topWindExposure>0.08</topWindExposure>
+							<wildClusterRadius>-1</wildClusterRadius>
+						</plant>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
