@@ -12,6 +12,14 @@
 				<baseMoodEffect>-1</baseMoodEffect>
 			</li>
 		</stages>
+		<modExtensions>
+			<li Class="ReGrowthCore.ThoughtExtensions">
+				<removeThoughtsWhenAdded>
+					<li>SoakingWet</li>
+					<li>RG_ExtremelyWet</li>
+				</removeThoughtsWhenAdded>
+			</li>
+		</modExtensions>
 	</ThoughtDef>
 
 	<ThoughtDef>
