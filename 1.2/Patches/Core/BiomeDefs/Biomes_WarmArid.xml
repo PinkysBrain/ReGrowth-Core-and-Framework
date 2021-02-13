@@ -39,6 +39,9 @@
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
 						<RG_Monsoon>0.3</RG_Monsoon>
+						<RG_FoggySandstorm>4</RG_FoggySandstorm>
+						<RG_SandStorm>4</RG_SandStorm>
+						<RG_SandStormHard>2</RG_SandStormHard>
 					</value>
 				</li>
 
@@ -46,7 +49,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName = "Desert"]/plantDensity</xpath>
 					<value>
-						<plantDensity>0.25</plantDensity>
+						<plantDensity>0.45</plantDensity>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
@@ -70,6 +73,9 @@
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
 						<RG_Monsoon>0.3</RG_Monsoon>
+						<RG_FoggySandstorm>3</RG_FoggySandstorm>
+						<RG_SandStorm>3</RG_SandStorm>
+						<RG_SandStormHard>1</RG_SandStormHard>
 					</value>
 				</li>
 
@@ -77,7 +83,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName = "ExtremeDesert"]/plantDensity</xpath>
 					<value>
-						<plantDensity>0.004</plantDensity>
+						<plantDensity>0.008</plantDensity>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -94,6 +100,9 @@
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
 						<RG_Monsoon>0.3</RG_Monsoon>
+						<RG_FoggySandstorm>3</RG_FoggySandstorm>
+						<RG_SandStorm>3</RG_SandStorm>
+						<RG_SandStormHard>1</RG_SandStormHard>
 					</value>
 				</li>
 			</operations>
