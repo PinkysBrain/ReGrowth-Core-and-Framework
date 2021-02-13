@@ -73,6 +73,7 @@
     <Compile Include="ReGrowthSettings.cs" />
     <Compile Include="RGDefOf.cs" />
     <Compile Include="Things\DevilDust_Tornado.cs" />
+    <Compile Include="WeatherOverlays\WeatherOverlay_Hail.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Blizzard.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_SandstormHard.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Sandstorm.cs" />
