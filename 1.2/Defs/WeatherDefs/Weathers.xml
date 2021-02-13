@@ -370,25 +370,25 @@
 		</commonalityRainfallFactor>    
 		<!-- Colors are Overcast -->
 		<skyColorsDay>
-			<sky>(0.8,0.8,0.8)</sky>
+			<sky>(0.8,0.7,0.57)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.7,0.57,0.43)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsDay>
 		<skyColorsDusk>
-			<sky>(1,1,1)</sky>
+			<sky>(1,0.9,0.77)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.6,0.47,0.33)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsDusk>
 		<skyColorsNightEdge>
-			<sky>(0.35,0.40,0.45)</sky>
+			<sky>(0.35,0.25,0.12)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightEdge>
 		<skyColorsNightMid>
-			<sky>(0.35,0.40,0.45)</sky>
+			<sky>(0.35,0.25,0.12)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
@@ -420,25 +420,25 @@
 		</overlayClasses>
 		<!-- Colors are Overcast -->
 		<skyColorsDay>
-			<sky>(0.8,0.8,0.8)</sky>
+			<sky>(0.8,0.7,0.57)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.7,0.57,0.43)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsDay>
 		<skyColorsDusk>
-			<sky>(1,1,1)</sky>
+			<sky>(1,0.9,0.77)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.6,0.47,0.33)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsDusk>
 		<skyColorsNightEdge>
-			<sky>(0.35,0.40,0.45)</sky>
+			<sky>(0.35,0.25,0.12)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightEdge>
 		<skyColorsNightMid>
-			<sky>(0.35,0.40,0.45)</sky>
+			<sky>(0.35,0.25,0.12)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
@@ -470,25 +470,25 @@
 		</overlayClasses>
 		<!-- Colors are Overcast -->
 		<skyColorsDay>
-			<sky>(0.8,0.8,0.8)</sky>
+			<sky>(0.8,0.7,0.57)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.7,0.57,0.43)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsDay>
 		<skyColorsDusk>
-			<sky>(1,1,1)</sky>
+			<sky>(1,0.9,0.77)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.6,0.47,0.33)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsDusk>
 		<skyColorsNightEdge>
-			<sky>(0.35,0.40,0.45)</sky>
+			<sky>(0.35,0.25,0.12)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightEdge>
 		<skyColorsNightMid>
-			<sky>(0.35,0.40,0.45)</sky>
+			<sky>(0.35,0.25,0.12)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
