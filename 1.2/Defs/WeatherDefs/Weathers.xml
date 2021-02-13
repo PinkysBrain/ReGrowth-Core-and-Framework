@@ -128,6 +128,13 @@
 			<overlay>(0.5,0.5,0.5)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
+		<modExtensions>
+			<li Class="ReGrowthCore.WeatherLetterExtensions">
+				<letterDef>NegativeEvent</letterDef>
+				<letterTitle>Hail</letterTitle>
+				<letterText>Hail</letterText>
+			</li>
+		</modExtensions>
 	</WeatherDef>
 
 	<!-- ================ New rain weathers ================ -->
@@ -493,13 +500,6 @@
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
-		<modExtensions>
-			<li Class="ReGrowthCore.WeatherLetterExtensions">
-				<letterDef>NegativeEvent</letterDef>
-				<letterTitle>Sandstorm hard</letterTitle>
-				<letterText>Sandstorm hard</letterText>
-			</li>
-		</modExtensions>
 	</WeatherDef>
 
 </Defs>
