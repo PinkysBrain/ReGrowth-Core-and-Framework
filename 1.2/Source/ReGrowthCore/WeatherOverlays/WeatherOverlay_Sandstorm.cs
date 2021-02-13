@@ -8,18 +8,11 @@ namespace ReGrowthCore
 		public WeatherOverlay_Sandstorm()
 		{
 			worldOverlayMat = null;
-			//worldOverlayPanSpeed1 = 0.008f;
-			//worldPanDir1 = new Vector2(-0.5f, -1f);
-			//worldPanDir1.Normalize();
-			//worldOverlayPanSpeed2 = 0.009f;
-			//worldPanDir2 = new Vector2(-0.48f, -1f);
-			//worldPanDir2.Normalize();
-
 			worldOverlayPanSpeed1 = 0.015f;
-			worldPanDir1 = new Vector2(-0.25f, -1f);
+			worldPanDir1 = new Vector2(0.25f, 0);
 			worldPanDir1.Normalize();
 			worldOverlayPanSpeed2 = 0.022f;
-			worldPanDir2 = new Vector2(-0.24f, -1f);
+			worldPanDir2 = new Vector2(0.24f, 0);
 			worldPanDir2.Normalize();
 		}
 

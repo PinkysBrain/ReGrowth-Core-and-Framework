@@ -77,7 +77,6 @@
     <Compile Include="WeatherOverlays\WeatherOverlay_Blizzard.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_SandstormHard.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Sandstorm.cs" />
-    <Compile Include="WeatherOverlays\WeatherOverlay_SandstormFog.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Overcast.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Monsoon.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_DrizzleRain.cs" />
