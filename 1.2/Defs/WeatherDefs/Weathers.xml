@@ -129,7 +129,7 @@
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
 	</WeatherDef>
-	
+
 	<!-- ================ New rain weathers ================ -->
 	<WeatherDef>
 		<defName>RG_Drizzle</defName>
@@ -181,7 +181,7 @@
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
 	</WeatherDef>
-	
+
 	<WeatherDef>
 		<defName>RG_Monsoon</defName>
 		<label>monsoon</label>
@@ -493,6 +493,13 @@
 			<overlay>(0.4,0.27,0.23)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
+		<modExtensions>
+			<li Class="ReGrowthCore.WeatherLetterExtensions">
+				<letterDef>NegativeEvent</letterDef>
+				<letterTitle>Sandstorm hard</letterTitle>
+				<letterText>Sandstorm hard</letterText>
+			</li>
+		</modExtensions>
 	</WeatherDef>
 
 </Defs>

@@ -60,12 +60,14 @@
     <Compile Include="ActiveTerrain\SpecialTerrain.cs" />
     <Compile Include="ActiveTerrain\SpecialTerrainList.cs" />
     <Compile Include="ActiveTerrain\ThingComps.cs" />
+    <Compile Include="HarmonyPatches\CurWeatherPerceived_Patch.cs" />
     <Compile Include="HarmonyPatches\TryGainMemory_Patch.cs" />
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
     <Compile Include="Comps\CompTreeLeavesSpawner.cs" />
     <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
     <Compile Include="MapExtender\MapComponentExtender.cs" />
     <Compile Include="MapExtender\ObjectSpawnsDef.cs" />
+    <Compile Include="ModExtensions\WeatherLetterExtensions.cs" />
     <Compile Include="ModExtensions\ThoughtExtensions.cs" />
     <Compile Include="MultiplayerSupport.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
