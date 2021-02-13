@@ -290,19 +290,20 @@
 	</WeatherDef>
 
 	<WeatherDef>
-		<defName>RG_SandstormFog</defName>
-		<label>sandstorm fog</label>
+		<defName>RG_FoggySandstorm</defName>
+		<label>foggy sandstorm</label>
 		<isBad>true</isBad>
 		<description>Fog reduces the accuracy of ranged weapons.</description>
 		<windSpeedFactor>0.5</windSpeedFactor>
 		<accuracyMultiplier>0.5</accuracyMultiplier>
-		<favorability>Neutral</favorability>
+		<favorability>Bad</favorability>
 		<perceivePriority>1</perceivePriority>
 		<ambientSounds>
 			<li>Ambient_Wind_Fog</li>
 		</ambientSounds>
 		<overlayClasses>
-			<li>ReGrowthCore.WeatherOverlay_SandstormFog</li>
+			<li>WeatherOverlay_Fog</li>
+			<li>ReGrowthCore.WeatherOverlay_Sandstorm</li>
 		</overlayClasses>
 		<commonalityRainfallFactor>
 			<points>
@@ -341,13 +342,10 @@
 		<defName>RG_SandStorm</defName>
 		<label>sandstorm</label>
 		<description>Strong snowfall and wind extremly reducesthe accuracy of ranged weapon and slows people down.</description>
-		<temperatureRange>-999~-0.5</temperatureRange>
-		<snowRate>2.0</snowRate>
 		<windSpeedFactor>2.0</windSpeedFactor>
 		<accuracyMultiplier>0.2</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
-		<rainRate>2.0</rainRate>
 		<moveSpeedMultiplier>0.2</moveSpeedMultiplier>
 		<commonalityRainfallFactor>
 			<points>
@@ -393,13 +391,10 @@
 		<defName>RG_SandStormHard</defName>
 		<label>hard sandstorm</label>
 		<description>Strong snowfall and wind extremly reducesthe accuracy of ranged weapon and slows people down.</description>
-		<temperatureRange>-999~-0.5</temperatureRange>
-		<snowRate>2.0</snowRate>
 		<windSpeedFactor>2.0</windSpeedFactor>
 		<accuracyMultiplier>0.2</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
-		<rainRate>2.0</rainRate>
 		<moveSpeedMultiplier>0.2</moveSpeedMultiplier>
 		<commonalityRainfallFactor>
 			<points>
@@ -440,7 +435,7 @@
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
 	</WeatherDef>
-	
+
 	<WeatherDef>
 		<defName>RG_Hail</defName>
 		<label>Hail</label>
