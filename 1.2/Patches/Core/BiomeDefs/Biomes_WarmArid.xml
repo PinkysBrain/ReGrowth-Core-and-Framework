@@ -38,7 +38,7 @@
 						<RG_FoggySnow>2</RG_FoggySnow>
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
-						<RG_Monsoon>0.5</RG_Monsoon>
+						<RG_Monsoon>0.3</RG_Monsoon>
 					</value>
 				</li>
 
@@ -69,7 +69,7 @@
 						<RG_FoggySnow>2</RG_FoggySnow>
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
-						<RG_Monsoon>0.5</RG_Monsoon>
+						<RG_Monsoon>0.3</RG_Monsoon>
 					</value>
 				</li>
 
@@ -93,7 +93,7 @@
 						<RG_FoggySnow>2</RG_FoggySnow>
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
-						<RG_Monsoon>0.5</RG_Monsoon>
+						<RG_Monsoon>0.3</RG_Monsoon>
 					</value>
 				</li>
 			</operations>

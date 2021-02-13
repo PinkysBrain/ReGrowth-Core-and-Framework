@@ -29,7 +29,7 @@
 		<stages>
 			<li>
 				<label>extremely wet</label>
-				<description>I'm extremely wet</description>
+				<description>I'm extremely wet.</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>
@@ -51,7 +51,7 @@
 			<li>
 				<label>sandy</label>
 				<description>There is sand like..... everywhere! Even in my eyes!</description>
-				<baseMoodEffect>-3</baseMoodEffect>
+				<baseMoodEffect>-6</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
