@@ -2,7 +2,7 @@
 <ModMetaData>
 
 	<name>[HLX] ReGrowth - Core</name>
-	<author>Helixien, Taranchuk</author>
+	<author>Helixien, Taranchuk, Alastair</author>
 	<supportedVersions>
 		<li>1.2</li>
 	</supportedVersions>
@@ -10,19 +10,18 @@
 	<packageId>ReGrowth.BOTR.Core</packageId>
 	<description>Check the workshop page for information.</description>
 	<modDependencies>
-        <li>
-            <packageId>brrainz.harmony</packageId>
-            <displayName>Harmony</displayName>
-            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld</downloadUrl>
-            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2196278117</steamWorkshopUrl>
-        </li>
-    </modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2196278117</steamWorkshopUrl>
+		</li>
+	</modDependencies>
 	<loadAfter>
 		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
-		<li>VanillaExpanded.VTEXE</li>
-		<li>AIRetexture.Plants</li>
+		<li>VanillaExpanded.VCEF</li>
 	</loadAfter>
 	<loadBefore>
 		<li>Balthoraz.RimUniverse.BiomesModule</li>
