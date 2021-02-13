@@ -78,6 +78,7 @@
 		</skyColorsNightMid>
 	</WeatherDef>
 
+	<!--
 	<WeatherDef>
 		<defName>RG_Hail</defName>
 		<label>hail</label>
@@ -103,7 +104,6 @@
 		<overlayClasses>
 			<li>ReGrowthCore.WeatherOverlay_Hail</li>
 		</overlayClasses>
-		<!-- Colors are Overcast -->
 		<skyColorsDay>
 			<sky>(0.8,0.8,0.8)</sky>
 			<shadow>(0.92,0.92,0.92)</shadow>
@@ -128,8 +128,8 @@
 			<overlay>(0.5,0.5,0.5)</overlay>
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
-	</WeatherDef>
-	
+	</WeatherDef> -->
+
 	<!-- ================ New rain weathers ================ -->
 	<WeatherDef>
 		<defName>RG_Drizzle</defName>
@@ -181,7 +181,7 @@
 			<saturation>0.9</saturation>
 		</skyColorsNightMid>
 	</WeatherDef>
-	
+
 	<WeatherDef>
 		<defName>RG_Monsoon</defName>
 		<label>monsoon</label>
@@ -356,7 +356,7 @@
 		<perceivePriority>1</perceivePriority>
 		<exposedThought>RG_Sandy</exposedThought>
 		<ambientSounds>
-			<li>Ambient_Wind_Fog</li>
+			<li>RG_Ambient_Sandstorm</li>
 		</ambientSounds>
 		<overlayClasses>
 			<li>WeatherOverlay_Fog</li>
@@ -398,9 +398,9 @@
 	<WeatherDef>
 		<defName>RG_SandStorm</defName>
 		<label>sandstorm</label>
-		<description>Sand is blown around by wind. Reduces the accuracy of ranged weapon and slows people down.</description>
+		<description>Wind blows around sand and reduces the accuracy of ranged weapon and slows people down.</description>
 		<windSpeedFactor>1.0</windSpeedFactor>
-		<accuracyMultiplier>0.2</accuracyMultiplier>
+		<accuracyMultiplier>0.6</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
 		<exposedThought>RG_Sandy</exposedThought>
@@ -413,7 +413,7 @@
 			</points>
 		</commonalityRainfallFactor>  
 		<ambientSounds>
-			<li>AmbientWind_Storm</li>
+			<li>RG_Ambient_Sandstorm</li>
 		</ambientSounds>
 		<overlayClasses>
 			<li>ReGrowthCore.WeatherOverlay_Sandstorm</li>
@@ -448,13 +448,13 @@
 	<WeatherDef>
 		<defName>RG_SandStormHard</defName>
 		<label>hard sandstorm</label>
-		<description>Strong snowfall and wind extremly reducesthe accuracy of ranged weapon and slows people down.</description>
+		<description>Strong wind blows around sand and extremly reduces the accuracy of ranged weapon and slows people down.</description>
 		<windSpeedFactor>2.0</windSpeedFactor>
 		<accuracyMultiplier>0.2</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
 		<exposedThought>RG_Sandy</exposedThought>
-		<moveSpeedMultiplier>0.2</moveSpeedMultiplier>
+		<moveSpeedMultiplier>0.3</moveSpeedMultiplier>
 		<commonalityRainfallFactor>
 			<points>
 				<li>(0, 0)</li>
@@ -463,7 +463,7 @@
 			</points>
 		</commonalityRainfallFactor>  
 		<ambientSounds>
-			<li>RG_Ambient_Blizzard</li>
+			<li>RG_Ambient_Sandstorm</li>
 		</ambientSounds>
 		<overlayClasses>
 			<li>ReGrowthCore.WeatherOverlay_SandstormHard</li>
