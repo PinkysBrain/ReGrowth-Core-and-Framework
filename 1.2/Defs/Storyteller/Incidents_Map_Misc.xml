@@ -13,6 +13,11 @@
 		</targetTags>
 		<workerClass>ReGrowthCore.IncidentWorker_DevilDusts</workerClass>
 		<baseChance>1.0</baseChance>
+		<allowedBiomes>
+			<li>AridShrubland</li>
+			<li>Desert</li>
+			<li>ExtremeDesert</li>
+		</allowedBiomes>
 	</IncidentDef>
 
 </Defs>
