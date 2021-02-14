@@ -42,6 +42,7 @@
 						<RG_FoggySandstorm>4</RG_FoggySandstorm>
 						<RG_SandStorm>4</RG_SandStorm>
 						<RG_SandStormHard>2</RG_SandStormHard>
+						<RG_Hail>1</RG_Hail>
 					</value>
 				</li>
 
@@ -76,6 +77,7 @@
 						<RG_FoggySandstorm>3</RG_FoggySandstorm>
 						<RG_SandStorm>3</RG_SandStorm>
 						<RG_SandStormHard>1</RG_SandStormHard>
+						<RG_Hail>1</RG_Hail>
 					</value>
 				</li>
 
@@ -103,6 +105,7 @@
 						<RG_FoggySandstorm>3</RG_FoggySandstorm>
 						<RG_SandStorm>3</RG_SandStorm>
 						<RG_SandStormHard>1</RG_SandStormHard>
+						<RG_Hail>1</RG_Hail>
 					</value>
 				</li>
 			</operations>

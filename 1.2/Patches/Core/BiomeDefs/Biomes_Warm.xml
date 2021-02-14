@@ -42,6 +42,7 @@
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
 						<RG_Monsoon>0.5</RG_Monsoon>
+						<RG_Hail>1</RG_Hail>
 					</value>
 				</li>
 
@@ -82,6 +83,7 @@
 						<RG_Overcast>6</RG_Overcast>
 						<RG_Windy>8</RG_Windy>
 						<RG_Monsoon>0.5</RG_Monsoon>
+						<RG_Hail>1</RG_Hail>
 					</value>
 				</li>
 			</operations>

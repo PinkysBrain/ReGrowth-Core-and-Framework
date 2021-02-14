@@ -3,9 +3,9 @@
 
 	<IncidentDef>
 		<defName>RG_DevilDusts</defName>
-		<label>devil dusts</label>
-		<letterLabel>Devil dusts</letterLabel>
-		<letterText>Devil dusts</letterText>
+		<label>dust devils</label>
+		<letterLabel>Dust devils</letterLabel>
+		<letterText>A group of strong, well-formed, and relatively short-lived whirlwinds have formed around the map. They will damage any animals and people who wander into it.</letterText>
 		<letterDef>NegativeEvent</letterDef>
 		<category>Misc</category>
 		<targetTags>
