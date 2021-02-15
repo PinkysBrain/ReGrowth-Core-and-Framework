@@ -26,6 +26,8 @@ namespace ReGrowthCore
 		public static ThingDef RG_Mote_DevilDustPuff;
 
 		public static SoundDef RG_Ambient_DustDevil;
+
+		public static WeatherDef RG_Hail;
 	}
 }
 

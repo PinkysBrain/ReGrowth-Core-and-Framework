@@ -22,10 +22,6 @@ namespace ReGrowthCore
 
 		public override void TickOverlay(Map map)
 		{
-			if (nextDamageTick == 0)
-            {
-				nextDamageTick = Find.TickManager.TicksGame + Rand.RangeInclusive(300, 600);
-			}
 			if (worldOverlayMat == null)
 			{
 				worldOverlayMat = MaterialPool.MatFrom("Weather/HailWorldOverlay");
@@ -36,11 +32,21 @@ namespace ReGrowthCore
 				//this.worldOverlayMat.SetColor("_TuningColor", new Color(1, 1, 1, 1)); //0.2720588f, 0.2720588f, 0.2720588f, 0.05882353f));
 			}
 			base.TickOverlay(map);
-			if (Find.TickManager.TicksGame > nextDamageTick)
-			{
-				DoDamage(map);
-				nextDamageTick = Find.TickManager.TicksGame + Rand.RangeInclusive(300, 600);
+
+			if (map.weatherManager.CurWeatherPerceived == RGDefOf.RG_Hail)
+            {
+				if (nextDamageTick == 0)
+				{
+					nextDamageTick = Find.TickManager.TicksGame + Rand.RangeInclusive(300, 600);
+				}
+
+				if (Find.TickManager.TicksGame > nextDamageTick)
+				{
+					DoDamage(map);
+					nextDamageTick = Find.TickManager.TicksGame + Rand.RangeInclusive(300, 600);
+				}
 			}
+
 		}
 
 		public void DoDamage(Map map)
