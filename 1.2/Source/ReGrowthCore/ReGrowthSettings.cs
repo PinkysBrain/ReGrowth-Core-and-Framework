@@ -30,12 +30,15 @@ namespace ReGrowthCore
 
         public static bool FlashUpdateCell = false;
 
+        public static bool DisableHailDamage = false;
+
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref SpawnLeaves, "SpawnLeaves", true);
             Scribe_Values.Look(ref SpawnFogOnHotSprings, "SpawnFogOnHotSprings", true);
             Scribe_Values.Look(ref FlashUpdateCell, "FlashUpdateCell", false);
+            Scribe_Values.Look(ref DisableHailDamage, "DisableHailDamage", false);
             //Scribe_Values.Look(ref ColdFog, "ColdFog", true);
             //Scribe_Values.Look(ref IceLayer, "IceLayer", true);
             //Scribe_Values.Look(ref RainWaterPuddles, "RainWaterPuddles", true);
@@ -52,6 +55,7 @@ namespace ReGrowthCore
             listingStandard.Begin(inRect);
             listingStandard.CheckboxLabeled("RG.SpawnLeaves".Translate(), ref SpawnLeaves);
             listingStandard.CheckboxLabeled("RG.SpawnFogOnHotSprings".Translate(), ref SpawnFogOnHotSprings);
+            listingStandard.CheckboxLabeled("RG.DisableHailDamage", ref DisableHailDamage);
             listingStandard.CheckboxLabeled("DEBUG: Flash Ticks", ref FlashUpdateCell);
             //listingStandard.CheckboxLabeled("RG.ColdFog".Translate(), ref ColdFog);
             //listingStandard.CheckboxLabeled("RG.IceLayer".Translate(), ref IceLayer);

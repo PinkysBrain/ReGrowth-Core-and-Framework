@@ -33,7 +33,7 @@ namespace ReGrowthCore
 			}
 			base.TickOverlay(map);
 
-			if (map.weatherManager.CurWeatherPerceived == RGDefOf.RG_Hail)
+			if (!ReGrowthSettings.DisableHailDamage && map.weatherManager.CurWeatherPerceived == RGDefOf.RG_Hail)
             {
 				if (nextDamageTick == 0)
 				{
