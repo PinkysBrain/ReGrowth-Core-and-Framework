@@ -55,7 +55,7 @@ namespace ReGrowthCore
             listingStandard.Begin(inRect);
             listingStandard.CheckboxLabeled("RG.SpawnLeaves".Translate(), ref SpawnLeaves);
             listingStandard.CheckboxLabeled("RG.SpawnFogOnHotSprings".Translate(), ref SpawnFogOnHotSprings);
-            listingStandard.CheckboxLabeled("RG.DisableHailDamage", ref DisableHailDamage);
+            listingStandard.CheckboxLabeled("RG.DisableHailDamage".Translate(), ref DisableHailDamage);
             listingStandard.CheckboxLabeled("DEBUG: Flash Ticks", ref FlashUpdateCell);
             //listingStandard.CheckboxLabeled("RG.ColdFog".Translate(), ref ColdFog);
             //listingStandard.CheckboxLabeled("RG.IceLayer".Translate(), ref IceLayer);
