@@ -20,6 +20,7 @@
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<WorkToBuild>800</WorkToBuild>
+			<MeditationFocusStrength>0.02</MeditationFocusStrength>
 		</statBases>
 		<passability>Standable</passability>
 		<defaultPlacingRot>South</defaultPlacingRot>
@@ -28,8 +29,40 @@
 			<expandHomeArea>false</expandHomeArea>
 			<isInert>true</isInert>
 			<preventDeteriorationInside>true</preventDeteriorationInside>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
 		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
 		<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Morbid</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_GraveFull">
+						<offset>0.10</offset>
+					</li>
+					<li Class="FocusStrengthOffset_GraveCorpseRelationship">
+						<offset>0.10</offset>
+					</li>
+					<li Class="FocusStrengthOffset_NearbyGraves">
+						<defs>
+							<li>Grave</li>
+							<li>Sarcophagus</li>
+						</defs>
+						<offsetPerBuilding>0.01</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>4</maxBuildings>
+						<focusPerFullGrave>0.01</focusPerFullGrave>
+						<explanationKey>MeditationFocusPerGrave</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>
