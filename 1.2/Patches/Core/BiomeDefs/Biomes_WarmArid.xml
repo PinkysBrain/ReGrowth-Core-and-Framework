@@ -24,7 +24,7 @@
 							<Plant_Dandelion>0.8</Plant_Dandelion>
 							<Plant_Bush>0.7</Plant_Bush>
 							<Plant_PincushionCactus>0.6</Plant_PincushionCactus>
-							<Plant_Agave>0.2</Plant_Agave>
+							<Plant_Agave>0.16</Plant_Agave>
 							<Plant_SaguaroCactus>0.26</Plant_SaguaroCactus>
 							<Plant_TreeDrago>0.20</Plant_TreeDrago>
 							<Plant_Berry>0.10</Plant_Berry>
@@ -61,7 +61,7 @@
 							<Plant_PincushionCactus>1.5</Plant_PincushionCactus>
 							<Plant_SaguaroCactus>0.8</Plant_SaguaroCactus>
 							<Plant_TreeDrago>0.50</Plant_TreeDrago>
-							<Plant_Agave>0.25</Plant_Agave>
+							<Plant_Agave>0.05</Plant_Agave>
 							<Plant_Bush>0.50</Plant_Bush>
 						</wildPlants>
 					</value>

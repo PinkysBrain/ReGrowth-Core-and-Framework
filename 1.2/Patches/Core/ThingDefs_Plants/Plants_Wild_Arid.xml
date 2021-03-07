@@ -17,13 +17,6 @@
 							<fertilitySensitivity>0</fertilitySensitivity>
 							<growDays>5</growDays>
 							<leaflessGraphicPath>Things/Plant/Leafless/SaguaroCactus_Leafless</leaflessGraphicPath>
-							<harvestWork>300</harvestWork>
-							<harvestYield>15</harvestYield>
-							<harvestMinGrowth>0.2</harvestMinGrowth>
-							<harvestedThingDef>RG_RawCactus</harvestedThingDef>
-							<harvestTag>Standard</harvestTag>
-							<soundHarvesting>Harvest_Standard</soundHarvesting>
-							<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
 							<topWindExposure>0.08</topWindExposure>
 							<wildClusterRadius>-1</wildClusterRadius>
 						</plant>
@@ -37,13 +30,6 @@
 							<fertilitySensitivity>0</fertilitySensitivity>
 							<growDays>2.5</growDays>
 							<visualSizeRange>0.40~0.65</visualSizeRange>
-							<harvestWork>120</harvestWork>
-							<harvestYield>5</harvestYield>
-							<harvestMinGrowth>0.2</harvestMinGrowth>
-							<harvestedThingDef>RG_RawCactus</harvestedThingDef>
-							<harvestTag>Standard</harvestTag>
-							<soundHarvesting>Harvest_Standard</soundHarvesting>
-							<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
 							<topWindExposure>0.0</topWindExposure>
 							<wildClusterRadius>4</wildClusterRadius>
 							<wildClusterWeight>4</wildClusterWeight>
