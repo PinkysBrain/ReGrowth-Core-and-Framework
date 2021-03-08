@@ -8,6 +8,7 @@ using Verse;
 
 namespace ReGrowthCore
 {
+
     public class ObjectSpawnsDef : Def
     {
         public ThingDef thingDef;
@@ -19,5 +20,6 @@ namespace ReGrowthCore
         public List<BiomeDef> allowedBiomes;
         public string disallowedBiome;
         public bool findCellsOutsideColony = false;
+        public bool spawnOnlyInPlayerMaps = false;
     }
 }

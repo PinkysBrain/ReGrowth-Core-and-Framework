@@ -97,6 +97,10 @@ namespace ReGrowthCore
 
             foreach (ObjectSpawnsDef element in DefDatabase<ObjectSpawnsDef>.AllDefs.Where(element => element.allowedBiomes.Contains(map.Biome)))
             {
+                if (element.spawnOnlyInPlayerMaps && !map.IsPlayerHome)
+                {
+                    continue;
+                }
                 IEnumerable<IntVec3> tmpTerrain = map.AllCells.InRandomOrder();
                 if (spawnCounter == 0)
                 {

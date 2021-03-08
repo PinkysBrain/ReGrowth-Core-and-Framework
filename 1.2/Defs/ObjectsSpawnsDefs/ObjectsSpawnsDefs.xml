@@ -20,6 +20,7 @@
 			<li>Tundra</li>
 			<li>ColdBog</li>
 		</allowedBiomes>
+		<spawnOnlyInPlayerMaps>true</spawnOnlyInPlayerMaps>
 	</ReGrowthCore.ObjectSpawnsDef>
 
 </Defs>

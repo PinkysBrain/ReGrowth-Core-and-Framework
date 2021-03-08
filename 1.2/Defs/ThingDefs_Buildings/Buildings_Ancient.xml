@@ -5,7 +5,7 @@
 		<defName>RG_AncientGraveFull</defName>
 		<label>ancient grave</label>
 		<description>An ancient final resting place of a long dead person.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>ReGrowthCore.Building_AncientGraveFull</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Ruins/AncientGraveFull/AncientGraveFull</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -63,6 +63,15 @@
 				</offsets>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="ReGrowthCore.AncientGraveExtensions">
+				<pawnKindDefsToSpawnInside>
+					<li>Villager</li>
+					<li>Town_Guard</li>
+					<li>Grenadier_Destructive</li>
+				</pawnKindDefsToSpawnInside>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 </Defs>
