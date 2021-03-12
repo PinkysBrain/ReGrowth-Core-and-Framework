@@ -30,6 +30,7 @@
 			<isInert>true</isInert>
 			<preventDeteriorationInside>true</preventDeteriorationInside>
 			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<claimable>false</claimable>
 		</building>
 		<inspectorTabs>
 			<li>ITab_Storage</li>
@@ -66,9 +67,13 @@
 		<modExtensions>
 			<li Class="ReGrowthCore.AncientGraveExtensions">
 				<pawnKindDefsToSpawnInside>
+					<li>Tribal_Archer</li>
 					<li>Villager</li>
+					<li>Tribal_Warrior</li>
+					<li>Tribal_ChiefMelee</li>
 					<li>Town_Guard</li>
 					<li>Grenadier_Destructive</li>
+					<li>Mercenary_Elite</li>
 				</pawnKindDefsToSpawnInside>
 			</li>
 		</modExtensions>
