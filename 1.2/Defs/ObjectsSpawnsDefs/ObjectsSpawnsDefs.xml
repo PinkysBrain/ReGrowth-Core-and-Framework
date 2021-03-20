@@ -4,6 +4,7 @@
 	<ReGrowthCore.ObjectSpawnsDef>
 		<defName>RG_ObjectSpawn_AncientGraveFull</defName>
 		<thingDef>RG_AncientGraveFull</thingDef>
+		<randomRotation>true</randomRotation>
 		<allowOnWater>false</allowOnWater>
 		<numberToSpawn>1~4</numberToSpawn>
 		<terrainValidationDisallowed />

@@ -126,7 +126,14 @@ namespace ReGrowthCore
                             }
                             if (canSpawn)
                             {
-                                GenSpawn.Spawn(thing, c, map);
+                                if (element.randomRotation)
+                                {
+                                    GenPlace.TryPlaceThing(thing, c, map, ThingPlaceMode.Direct, null, null, Rot4.Random);
+                                }
+                                else
+                                {
+                                    GenSpawn.Spawn(thing, c, map);
+                                }
                                 spawnCounter--;
                             }
                         }

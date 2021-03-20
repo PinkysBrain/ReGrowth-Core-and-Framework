@@ -21,5 +21,6 @@ namespace ReGrowthCore
         public string disallowedBiome;
         public bool findCellsOutsideColony = false;
         public bool spawnOnlyInPlayerMaps = false;
+        public bool randomRotation;
     }
 }

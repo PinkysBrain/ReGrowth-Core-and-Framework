@@ -25,9 +25,12 @@ namespace ReGrowthCore
                     buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
                     var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
                     compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
+                    this.innerContainer.TryAddOrTransfer(buriedPawn);
+                    //Find.LetterStack.ReceiveLetter("t", "t", LetterDefOf.NegativeEvent, this);
                 }
             }
         }
+
         public override void EjectContents()
         {
             base.EjectContents();
