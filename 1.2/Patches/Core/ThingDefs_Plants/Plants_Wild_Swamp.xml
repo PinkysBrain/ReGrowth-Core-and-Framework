@@ -14,7 +14,7 @@
 						<comps>
 							<li Class="CompProperties_Spawner">
 								<compClass>ReGrowthCore.CompTreeLeavesSpawner</compClass>
-								<thingToSpawn>Plant_TreeMaple</thingToSpawn>
+								<thingToSpawn>RG_Filth_LeavesTreeOak</thingToSpawn>
 								<spawnCount>1</spawnCount>
 								<spawnIntervalRange>3000~8000</spawnIntervalRange>
 								<spawnMaxAdjacent>3</spawnMaxAdjacent>

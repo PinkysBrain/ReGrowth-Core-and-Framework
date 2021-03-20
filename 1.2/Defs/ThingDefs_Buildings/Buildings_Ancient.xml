@@ -30,7 +30,7 @@
 			<isInert>true</isInert>
 			<preventDeteriorationInside>true</preventDeteriorationInside>
 			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-			<claimable>false</claimable>
+			<claimable>true</claimable>
 		</building>
 		<inspectorTabs>
 			<li>ITab_Storage</li>

@@ -10,7 +10,7 @@
 		<favorability>Neutral</favorability>
 		<perceivePriority>0</perceivePriority>
 		<ambientSounds>
-			<li>AmbientWind_Clear</li>
+			<li>Ambient_Wind_Clear</li>
 		</ambientSounds>
 		<overlayClasses>
 			<li>ReGrowthCore.WeatherOverlay_Overcast</li>
@@ -50,7 +50,7 @@
 		<windSpeedFactor>1.0</windSpeedFactor>
 		<accuracyMultiplier>0.75</accuracyMultiplier>
 		<ambientSounds>
-			<li>AmbientWind_Storm</li>
+			<li>Ambient_Wind_Storm</li>
 		</ambientSounds>
 		<skyColorsDay>
 			<sky>(1,1,1)</sky>
