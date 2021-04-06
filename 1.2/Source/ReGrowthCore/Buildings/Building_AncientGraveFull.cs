@@ -14,21 +14,25 @@ namespace ReGrowthCore
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
+            try
             {
-                var options = this.def.GetModExtension<AncientGraveExtensions>();
-                if (options?.pawnKindDefsToSpawnInside != null)
+                if (!respawningAfterLoad)
                 {
-                    var pawnKind = options.pawnKindDefsToSpawnInside.RandomElement();
-                    var buriedPawn = PawnGenerator.GeneratePawn(pawnKind);
-                    buriedPawn.Kill(null);
-                    buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
-                    var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
-                    compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
-                    this.innerContainer.TryAddOrTransfer(buriedPawn);
-                    //Find.LetterStack.ReceiveLetter("t", "t", LetterDefOf.NegativeEvent, this);
+                    var options = this.def.GetModExtension<AncientGraveExtensions>();
+                    if (options?.pawnKindDefsToSpawnInside != null && options.pawnKindDefsToSpawnInside.Any(x => x != null))
+                    {
+                        var pawnKind = options.pawnKindDefsToSpawnInside.Where(x => x != null).RandomElement();
+                        var buriedPawn = PawnGenerator.GeneratePawn(pawnKind);
+                        buriedPawn.Kill(null);
+                        buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
+                        var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
+                        compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
+                        this.innerContainer.TryAddOrTransfer(buriedPawn);
+                        //Find.LetterStack.ReceiveLetter("t", "t", LetterDefOf.NegativeEvent, this);
+                    }
                 }
             }
+            catch { };
         }
 
         public override void EjectContents()
