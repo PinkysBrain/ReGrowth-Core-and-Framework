@@ -60,7 +60,6 @@
     <Compile Include="ActiveTerrain\SpecialTerrain.cs" />
     <Compile Include="ActiveTerrain\SpecialTerrainList.cs" />
     <Compile Include="ActiveTerrain\ThingComps.cs" />
-    <Compile Include="Buildings\Building_AncientGraveFull.cs" />
     <Compile Include="HarmonyPatches\CurWeatherPerceived_Patch.cs" />
     <Compile Include="HarmonyPatches\TryGainMemory_Patch.cs" />
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
@@ -102,6 +101,8 @@
     <None Include="obj\ReGrowthCore.csproj.nuget.g.props" />
     <None Include="obj\ReGrowthCore.csproj.nuget.g.targets" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Buildings\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
