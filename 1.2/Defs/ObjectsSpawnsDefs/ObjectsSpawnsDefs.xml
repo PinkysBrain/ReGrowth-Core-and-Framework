@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-<!--
+
 	<ReGrowthCore.ObjectSpawnsDef>
 		<defName>RG_ObjectSpawn_AncientGraveFull</defName>
 		<thingDef>RG_AncientGraveFull</thingDef>
@@ -23,5 +23,5 @@
 		</allowedBiomes>
 		<spawnOnlyInPlayerMaps>true</spawnOnlyInPlayerMaps>
 	</ReGrowthCore.ObjectSpawnsDef>
--->
+
 </Defs>
