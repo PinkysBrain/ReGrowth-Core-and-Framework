@@ -47,7 +47,7 @@
 		<description>Light winds help turbines but reduces the accuracy of ranged weapons.</description>
 		<repeatable>true</repeatable>
 		<favorability>Neutral</favorability>
-		<windSpeedFactor>1.0</windSpeedFactor>
+		<windSpeedFactor>1.8</windSpeedFactor>
 		<accuracyMultiplier>0.75</accuracyMultiplier>
 		<ambientSounds>
 			<li>Ambient_Wind_Storm</li>
