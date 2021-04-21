@@ -28,7 +28,6 @@ namespace ReGrowthCore
                         var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
                         compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
                         this.innerContainer.TryAddOrTransfer(buriedPawn.Corpse);
-                        Find.LetterStack.ReceiveLetter("t", "t", LetterDefOf.NegativeEvent, this);
                     }
                 }
             }
