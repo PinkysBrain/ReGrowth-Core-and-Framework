@@ -28,6 +28,12 @@ namespace ReGrowthCore
 		public static SoundDef RG_Ambient_DustDevil;
 
 		public static WeatherDef RG_Hail;
+
+		public static TerrainDef RG_HotSpring;
+
+		public static JobDef RG_SwimInHotSpring;
+
+		public static ThoughtDef RG_HotSpringThought;
 	}
 }
 

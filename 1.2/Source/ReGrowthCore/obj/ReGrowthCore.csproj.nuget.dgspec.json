@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\RegrowthCore\\ReGrowthCore.csproj": {}
+    "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\ReGrowthCore\\ReGrowthCore.csproj": {}
   },
   "projects": {
-    "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\RegrowthCore\\ReGrowthCore.csproj": {
+    "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\ReGrowthCore\\ReGrowthCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\RegrowthCore\\ReGrowthCore.csproj",
+        "projectUniqueName": "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
         "projectName": "ReGrowthCore",
-        "projectPath": "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\RegrowthCore\\ReGrowthCore.csproj",
+        "projectPath": "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\RegrowthCore\\obj\\",
+        "outputPath": "C:\\GAMES\\Rimworld\\Mods\\ReGrowth-Core\\1.2\\Source\\ReGrowthCore\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

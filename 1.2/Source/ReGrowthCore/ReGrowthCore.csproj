@@ -66,6 +66,8 @@
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
     <Compile Include="Comps\CompTreeLeavesSpawner.cs" />
     <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
+    <Compile Include="Jobs\JobDriver_SwimInHotSpring.cs" />
+    <Compile Include="Jobs\JoyGiver_SwimInHotSpring.cs" />
     <Compile Include="MapExtender\MapComponentExtender.cs" />
     <Compile Include="MapExtender\ObjectSpawnsDef.cs" />
     <Compile Include="ModExtensions\WeatherLetterExtensions.cs" />
