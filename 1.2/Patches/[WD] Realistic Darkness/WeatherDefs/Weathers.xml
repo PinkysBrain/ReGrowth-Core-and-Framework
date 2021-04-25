@@ -51,10 +51,10 @@
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsNightMid</xpath>
 					<value>
 						<skyColorsNightMid>
-							<sky>(0.08,0.18,0.1)</sky>
+							<sky>(0.12,0.22,0.12)</sky>
 							<shadow>(0.8,0.8,0.8)</shadow>
 							<overlay>(0.8,0.8,0.8)</overlay>
-							<saturation>1.35</saturation>
+							<saturation>0.75</saturation>
 						</skyColorsNightMid>
 					</value>
 				</li>
