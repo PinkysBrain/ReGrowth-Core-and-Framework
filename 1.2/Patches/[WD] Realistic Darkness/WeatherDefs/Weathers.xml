@@ -38,7 +38,7 @@
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsNightEdge</xpath>
 					<value>
 						<skyColorsNightEdge>
-							<sky>(0.2,0.25,0.22)</sky>
+							<sky>(0.25,0.25,0.22)</sky>
 							<shadow>(1,1,1)</shadow>
 							<overlay>(0.6,0.6,0.6)</overlay>
 							<saturation>0.95</saturation>
@@ -51,10 +51,10 @@
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsNightMid</xpath>
 					<value>
 						<skyColorsNightMid>
-							<sky>(0.12,0.22,0.12)</sky>
+							<sky>(0.2,0.3,0.2)</sky>
 							<shadow>(0.8,0.8,0.8)</shadow>
-							<overlay>(0.8,0.8,0.8)</overlay>
-							<saturation>0.75</saturation>
+							<overlay>(0.2,0.2,0.2)</overlay>
+							<saturation>0.3</saturation>
 						</skyColorsNightMid>
 					</value>
 				</li>
@@ -154,10 +154,10 @@
 					<xpath>/Defs/WeatherDef[defName = "RG_Hail" or defName = "RG_Drizzle" or defName = "RG_Monsoon"]/skyColorsNightMid</xpath>
 					<value>
 						<skyColorsNightMid>
-							<sky>(0.055,0.115,0.125)</sky>
+							<sky>(0.08,0.14,0.15)</sky>
 							<shadow>(0.8,0.8,0.8)</shadow>
 							<overlay>(0.75,0.75,0.75)</overlay>
-							<saturation>1.35</saturation>
+							<saturation>0.6</saturation>
 						</skyColorsNightMid>
 					</value>
 				</li>
@@ -345,10 +345,10 @@
 					<xpath>/Defs/WeatherDef[defName = "RG_SandStorm" or defName = "RG_SandStormHard"]/skyColorsNightEdge</xpath>
 					<value>
 						<skyColorsNightEdge>
-							<sky>(0.2,0.25,0.22)</sky>
+							<sky>(0.2,0.24,0.2)</sky>
 							<shadow>(1,1,1)</shadow>
-							<overlay>(0.6,0.6,0.6)</overlay>
-							<saturation>0.95</saturation>
+							<overlay>(0.2,0.2,0.2)</overlay>
+							<saturation>0.3</saturation>
 						</skyColorsNightEdge>
 					</value>
 				</li>
@@ -358,10 +358,10 @@
 					<xpath>/Defs/WeatherDef[defName = "RG_SandStorm" or defName = "RG_SandStormHard"]/skyColorsNightMid</xpath>
 					<value>
 						<skyColorsNightMid>
-							<sky>(0.08,0.18,0.1)</sky>
+							<sky>(0.1,0.2,0.1)</sky>
 							<shadow>(0.8,0.8,0.8)</shadow>
-							<overlay>(0.8,0.8,0.8)</overlay>
-							<saturation>1.35</saturation>
+							<overlay>(0.2,0.2,0.2)</overlay>
+							<saturation>0.3</saturation>
 						</skyColorsNightMid>
 					</value>
 				</li>
