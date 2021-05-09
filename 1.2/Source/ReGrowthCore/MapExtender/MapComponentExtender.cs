@@ -26,7 +26,7 @@ namespace ReGrowthCore
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.verifyFirstTime, "verifyFirstTime", true, true);
         }
-
+        
         public override void FinalizeInit()
         {
             base.FinalizeInit();
@@ -35,7 +35,7 @@ namespace ReGrowthCore
                 this.DoMapSpawns();
             }
         }
-
+        
         public bool CanSpawnAt(IntVec3 c, ObjectSpawnsDef element)
         {
             if (!element.allowOnChunks)
@@ -54,11 +54,11 @@ namespace ReGrowthCore
                     }
                 }
             }
-
+        
             TerrainDef terrain = c.GetTerrain(map);
-
+        
             bool flagAllowed = true;
-
+        
             foreach (string allowed in element.terrainValidationAllowed)
             {
                 if (terrain.defName == allowed)
@@ -68,7 +68,7 @@ namespace ReGrowthCore
                 else flagAllowed = false;
             }
             if (!flagAllowed) return false;
-
+        
             foreach (string notAllowed in element.terrainValidationDisallowed)
             {
                 if (terrain.HasTag(notAllowed))
@@ -76,12 +76,12 @@ namespace ReGrowthCore
                     return false;
                 }
             }
-
+        
             if (!element.allowOnWater && terrain.IsWater)
             {
                 return false;
             }
-
+        
             if (element.findCellsOutsideColony)
             {
                 if (!OutOfCenter(c, map, 60))
@@ -89,12 +89,12 @@ namespace ReGrowthCore
                     return false;
                 }
             }
-
+        
             return true;
         }
         public void DoMapSpawns()
         {
-
+        
             foreach (ObjectSpawnsDef element in DefDatabase<ObjectSpawnsDef>.AllDefs.Where(element => element.allowedBiomes.Contains(map.Biome)))
             {
                 if (element.spawnOnlyInPlayerMaps && !map.IsPlayerHome)
@@ -138,7 +138,7 @@ namespace ReGrowthCore
                             }
                         }
                     }
-
+                
                     if (canSpawn && spawnCounter <= 0)
                     {
                         spawnCounter = 0;
@@ -148,7 +148,7 @@ namespace ReGrowthCore
             }
             this.verifyFirstTime = false;
         }
-
+        
         public static bool OutOfCenter(IntVec3 c, Map map, int centerDist)
         {
             IntVec3 CenterPoint = map.Center;

@@ -21,34 +21,38 @@ namespace ReGrowthCore
                     var options = this.def.GetModExtension<AncientGraveExtensions>();
                     if (options?.pawnKindDefsToSpawnInside != null && options.pawnKindDefsToSpawnInside.Any(x => x != null))
                     {
-                        var pawnKind = options.pawnKindDefsToSpawnInside.Where(x => x != null).RandomElement();
-                        var buriedPawn = PawnGenerator.GeneratePawn(pawnKind);
-                        buriedPawn.Kill(null);
-                        buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
-                        var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
-                        compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
-                        this.innerContainer.TryAddOrTransfer(buriedPawn.Corpse);
+                        LongEventHandler.ExecuteWhenFinished(() =>
+                        {
+                            var pawnKind = options.pawnKindDefsToSpawnInside.Where(x => x != null).RandomElement();
+                            var buriedPawn = PawnGenerator.GeneratePawn(pawnKind);
+                            buriedPawn.Kill(null);
+                            buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
+                            var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
+                            compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
+                            this.innerContainer.TryAddOrTransfer(buriedPawn.Corpse);
+                        });
                     }
                 }
-
-                // here is a bugfix for my silly bug with saving pawn, instead of corpse
-                var pawn = this.innerContainer.FirstOrDefault(x => x is Pawn);
-                if (pawn is Pawn corpse)
+                LongEventHandler.ExecuteWhenFinished(() =>
                 {
-                    this.innerContainer.Remove(pawn);
-
-                    var options = this.def.GetModExtension<AncientGraveExtensions>();
-                    if (options?.pawnKindDefsToSpawnInside != null && options.pawnKindDefsToSpawnInside.Any(x => x != null))
+                    // here is a bugfix for my silly bug with saving pawn, instead of corpse
+                    var pawn = this.innerContainer.FirstOrDefault(x => x is Pawn);
+                    if (pawn is Pawn corpse)
                     {
-                        var pawnKind = options.pawnKindDefsToSpawnInside.Where(x => x != null).RandomElement();
-                        var buriedPawn = PawnGenerator.GeneratePawn(pawnKind);
-                        buriedPawn.Kill(null);
-                        buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
-                        var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
-                        compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
-                        this.innerContainer.TryAddOrTransfer(buriedPawn.Corpse);
+                        this.innerContainer.Remove(pawn);
+                        var options = this.def.GetModExtension<AncientGraveExtensions>();
+                        if (options?.pawnKindDefsToSpawnInside != null && options.pawnKindDefsToSpawnInside.Any(x => x != null))
+                        {
+                            var pawnKind = options.pawnKindDefsToSpawnInside.Where(x => x != null).RandomElement();
+                            var buriedPawn = PawnGenerator.GeneratePawn(pawnKind);
+                            buriedPawn.Kill(null);
+                            buriedPawn.Corpse.Age = Rand.RangeInclusive(50, 300) * GenDate.DaysPerYear * GenDate.TicksPerDay;
+                            var compRottable = buriedPawn.Corpse.GetComp<CompRottable>();
+                            compRottable.RotProgress = compRottable.PropsRot.TicksToDessicated + 100000;
+                            this.innerContainer.TryAddOrTransfer(buriedPawn.Corpse);
+                        }
                     }
-                }
+                });
             }
             catch { };
         }
