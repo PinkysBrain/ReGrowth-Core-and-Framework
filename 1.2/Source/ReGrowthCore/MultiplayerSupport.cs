@@ -16,9 +16,16 @@ namespace ReGrowthCore
 				return;
 			}
 			MP.RegisterSyncMethod(typeof(CompTreeLeavesSpawner), "TryFindSpawnCell", null);
-			var method = AccessTools.Method(typeof(CompTreeLeavesSpawner), "TryFindSpawnCell", null, null);
-			MultiplayerSupport.harmony.Patch(method, new HarmonyMethod(typeof(MultiplayerSupport),
-				"FixRNGPre", null), new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPos", null), null, null);
+			var tryFindSpawnCell = AccessTools.Method(typeof(CompTreeLeavesSpawner), "TryFindSpawnCell", null, null);
+			harmony.Patch(tryFindSpawnCell, new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPre", null), new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPos", null), null, null);
+
+			MP.RegisterSyncMethod(typeof(WeatherOverlay_Hail), "DoDamage", null);
+			var doDamage = AccessTools.Method(typeof(WeatherOverlay_Hail), "DoDamage", null, null);
+			harmony.Patch(doDamage, new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPre", null), new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPos", null), null, null);
+
+			MP.RegisterSyncMethod(typeof(DevilDust_Tornado), "Tick", null);
+			var devilDust_Tornado = AccessTools.Method(typeof(DevilDust_Tornado), "Tick", null, null);
+			harmony.Patch(devilDust_Tornado, new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPre", null), new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPos", null), null, null);
 		}
 
 		private static void FixRNGPre()

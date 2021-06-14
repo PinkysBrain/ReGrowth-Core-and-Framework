@@ -52,7 +52,7 @@ namespace ReGrowthCore
 		public void DoDamage(Map map)
         {
 			var victimCandidates = map.mapPawns.AllPawns.Where(x => !x.RaceProps.IsMechanoid && x.Spawned && !x.Position.Roofed(map));
-			var victims = RandomlySelectedItems(victimCandidates, (int)(victimCandidates.Count() / 10f), victimCandidates.Count(), new System.Random()).ToList();
+			var victims = RandomlySelectedItems(victimCandidates, (int)(victimCandidates.Count() / 10f)).ToList();
 			for (int num = victims.Count - 1; num >= 0; num--)
             {
 				var damageInfo = new DamageInfo(DamageDefOf.Blunt, Rand.Range(0.1f, 0.5f));
@@ -60,26 +60,9 @@ namespace ReGrowthCore
             }
 		}
 
-		public static IEnumerable<T> RandomlySelectedItems<T>(IEnumerable<T> sequence, int count, int sequenceLength, System.Random rng)
+		public static IEnumerable<Pawn> RandomlySelectedItems(IEnumerable<Pawn> sequence, int count)
 		{
-			int available = sequenceLength;
-			int remaining = count;
-
-			using (var iterator = sequence.GetEnumerator())
-			{
-				for (int current = 0; current < sequenceLength; ++current)
-				{
-					iterator.MoveNext();
-
-					if (rng.NextDouble() < remaining / (double)available)
-					{
-						yield return iterator.Current;
-						--remaining;
-					}
-
-					--available;
-				}
-			}
+			return sequence.InRandomOrder().Take(count);
 		}
 	}
 }
