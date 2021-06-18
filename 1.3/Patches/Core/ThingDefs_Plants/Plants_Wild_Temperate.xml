@@ -59,6 +59,18 @@
 						<leaflessGraphicPath>Things/Plant/Leafless/Moss_Leafless</leaflessGraphicPath>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Berry"]/plant/leaflessGraphicPath</xpath>
+					<value>
+						<leaflessGraphicPath>Things/Plant/Leafless/BerryPlant_Leafless</leaflessGraphicPath>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Berry"]/plant/immatureGraphicPath</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Immature/BerryPlant_Immature</immatureGraphicPath>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>

@@ -463,7 +463,7 @@
 	<WeatherDef>
 		<defName>RG_SandStormHard</defName>
 		<label>hard sandstorm</label>
-		<description>Strong snowfall and wind extremly reducesthe accuracy of ranged weapon and slows people down.</description>
+		<description>Blowing sand and wind extremly reducesthe accuracy of ranged weapon and slows people down.</description>
 		<windSpeedFactor>2.0</windSpeedFactor>
 		<accuracyMultiplier>0.6</accuracyMultiplier>
 		<favorability>Bad</favorability>
