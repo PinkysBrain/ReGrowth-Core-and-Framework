@@ -26,7 +26,8 @@
 							<Plant_Moss>4.0</Plant_Moss>
 							<Plant_Bush>1.2</Plant_Bush>
 							<Plant_TreeBirch>0.4</Plant_TreeBirch>
-							<Plant_Berry>0.10</Plant_Berry>
+							<Plant_Berry>0.06</Plant_Berry>
+							<RG_Plant_Raspberry>0.06</RG_Plant_Raspberry>
 							<Plant_TreePine>1.4</Plant_TreePine>
 							<Plant_HealrootWild>0.05</Plant_HealrootWild>
 						</wildPlants>
@@ -64,6 +65,7 @@
 							<Plant_TreePine>0.08</Plant_TreePine>
 							<Plant_TreeBirch>0.08</Plant_TreeBirch>
 							<Plant_Berry>1.0</Plant_Berry>
+							<RG_Plant_Raspberry>0.3</RG_Plant_Raspberry>
 							<Plant_HealrootWild>0.05</Plant_HealrootWild>
 						</wildPlants>
 					</value>
@@ -99,6 +101,7 @@
 							<Plant_Astragalus>0.1</Plant_Astragalus>
 							<Plant_TreePine>0.2</Plant_TreePine>
 							<Plant_Berry>0.05</Plant_Berry>
+							<RG_Plant_Raspberry>0.02</RG_Plant_Raspberry>
 							<Plant_HealrootWild>0.05</Plant_HealrootWild>
 							<Plant_TreeMaple>0.1</Plant_TreeMaple>
 						</wildPlants>
