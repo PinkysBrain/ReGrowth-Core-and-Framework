@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj": {}
   },
   "projects": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
         "projectName": "ReGrowthCore",
-        "projectPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
