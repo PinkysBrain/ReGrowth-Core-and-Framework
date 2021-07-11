@@ -57,7 +57,7 @@ namespace ReGrowthCore
                     float heatPushEfficiency = (ambientTemperature < 20f) ? 1f : (ambientTemperature > 120f) ? 0f : Mathf.InverseLerp(120f, 20f, ambientTemperature);
                     float energyLimit = Props.energyPerSecond * heatPushEfficiency * 4.16666651f;
                     float num2 = GenTemperature.ControlTemperatureTempChange(parent.Position, parent.Map, energyLimit, TargetTemperature);
-                    bool flag = !Mathf.Approximately(num2, 0f) && parent.Position.GetRoomGroup(parent.Map) != null;//Added room group check
+                    bool flag = !Mathf.Approximately(num2, 0f) && parent.Position.GetRoom(parent.Map) != null;//Added room check
                     var powerTraderComp = parent.GetComp<TerrainComp_PowerTrader>();
                     if (flag)
                     {

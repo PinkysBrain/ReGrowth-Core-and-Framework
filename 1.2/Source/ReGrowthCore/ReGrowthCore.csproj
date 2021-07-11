@@ -61,10 +61,10 @@
     <Compile Include="ActiveTerrain\SpecialTerrainList.cs" />
     <Compile Include="ActiveTerrain\ThingComps.cs" />
     <Compile Include="Buildings\Building_AncientGraveFull.cs" />
+    <Compile Include="Comps\CompAutumnLeavesSpawner.cs" />
     <Compile Include="HarmonyPatches\CurWeatherPerceived_Patch.cs" />
     <Compile Include="HarmonyPatches\TryGainMemory_Patch.cs" />
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
-    <Compile Include="Comps\CompTreeLeavesSpawner.cs" />
     <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
     <Compile Include="Jobs\JobDriver_SwimInHotSpring.cs" />
     <Compile Include="Jobs\JoyGiver_SwimInHotSpring.cs" />
@@ -89,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.2.2753</Version>
+      <Version>1.2.2905</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.0.2</Version>
