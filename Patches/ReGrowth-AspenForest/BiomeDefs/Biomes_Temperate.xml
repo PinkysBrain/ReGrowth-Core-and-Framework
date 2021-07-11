@@ -9,12 +9,10 @@
 			<success>Always</success>
 			<operations>
 				<!-- ================ Biome Apsen Forest ================ -->
-				<li Class="PatchOperationReplace">
+				<li Class="PatchOperationAdd">
 					<xpath>/Defs/BiomeDef[defName = "RG-AF_AspenForest"]/wildPlants</xpath>
 					<value>
-						<wildPlants>
-							<RG_Plant_Raspberry>0.03</RG_Plant_Raspberry>
-						</wildPlants>
+						<RG_Plant_Raspberry>0.03</RG_Plant_Raspberry>
 					</value>
 				</li>
 			</operations>
