@@ -15,8 +15,8 @@ namespace ReGrowthCore
 			{
 				return;
 			}
-			MP.RegisterSyncMethod(typeof(CompTreeLeavesSpawner), "TryFindSpawnCell", null);
-			var tryFindSpawnCell = AccessTools.Method(typeof(CompTreeLeavesSpawner), "TryFindSpawnCell", null, null);
+			MP.RegisterSyncMethod(typeof(CompAutumnLeavesSpawner), "TryFindSpawnCell", null);
+			var tryFindSpawnCell = AccessTools.Method(typeof(CompAutumnLeavesSpawner), "TryFindSpawnCell", null, null);
 			harmony.Patch(tryFindSpawnCell, new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPre", null), new HarmonyMethod(typeof(MultiplayerSupport), "FixRNGPos", null), null, null);
 
 			MP.RegisterSyncMethod(typeof(WeatherOverlay_Hail), "DoDamage", null);

@@ -4,14 +4,12 @@ using Verse;
 
 namespace ReGrowthCore
 {
-	public class CompTreeLeavesSpawner : ThingComp
-	{
-		private int ticksUntilSpawn;
-
+	public class CompLeavesSpawnerBase : ThingComp
+    {
+		protected int ticksUntilSpawn;
 		public CompProperties_Spawner PropsSpawner => (CompProperties_Spawner)props;
 
 		private bool PowerOn => parent.GetComp<CompPowerTrader>()?.PowerOn ?? false;
-
 		public override void PostSpawnSetup(bool respawningAfterLoad)
 		{
 			if (!respawningAfterLoad)
@@ -59,17 +57,6 @@ namespace ReGrowthCore
 			}
 		}
 
-		private void CheckShouldSpawn()
-		{
-			if (this.parent is Plant tree && !tree.LeaflessNow)
-            {
-				if (ticksUntilSpawn <= 0 && GetFallColorFactor.fallColorFactor > 0.48f)
-				{
-					TryDoSpawn();
-					ResetCountdown();
-				}
-			}
-		}
 
 		public bool TryDoSpawn()
 		{
@@ -163,7 +150,7 @@ namespace ReGrowthCore
 			return false;
 		}
 
-		private void ResetCountdown()
+		protected void ResetCountdown()
 		{
 			ticksUntilSpawn = PropsSpawner.spawnIntervalRange.RandomInRange;
 		}
@@ -197,6 +184,41 @@ namespace ReGrowthCore
 				return "NextSpawnedItemIn".Translate(GenLabel.ThingLabel(PropsSpawner.thingToSpawn, null, PropsSpawner.spawnCount)) + ": " + ticksUntilSpawn.ToStringTicksToPeriod();
 			}
 			return null;
+		}
+
+		public virtual void CheckShouldSpawn()
+        {
+
+        }
+	}
+
+	public class CompAutumnLeavesSpawner : CompLeavesSpawnerBase
+	{
+		public override void CheckShouldSpawn()
+		{
+			if (this.parent is Plant tree && !tree.LeaflessNow)
+            {
+				if (ticksUntilSpawn <= 0 && GetFallColorFactor.fallColorFactor > 0.48f)
+				{
+					TryDoSpawn();
+					ResetCountdown();
+				}
+			}
+		}
+	}
+
+	public class CompLeavesSpawner : CompLeavesSpawnerBase
+	{
+		public override void CheckShouldSpawn()
+		{
+			if (this.parent is Plant tree && !tree.LeaflessNow)
+			{
+				if (ticksUntilSpawn <= 0)
+				{
+					TryDoSpawn();
+					ResetCountdown();
+				}
+			}
 		}
 	}
 }

@@ -312,11 +312,15 @@
     <Compile Include="ActiveTerrain\SpecialTerrain.cs" />
     <Compile Include="ActiveTerrain\SpecialTerrainList.cs" />
     <Compile Include="ActiveTerrain\ThingComps.cs" />
+    <Compile Include="BiomeWorkers\BiomePerlin.cs" />
+    <Compile Include="BiomeWorkers\BiomeWorker_AspenForest.cs" />
+    <Compile Include="BiomeWorkers\BiomeWorker_NeverSpawn.cs" />
+    <Compile Include="BiomeWorkers\BiomeWorker_VolcanicIceSheet.cs" />
     <Compile Include="Buildings\Building_AncientGraveFull.cs" />
     <Compile Include="HarmonyPatches\CurWeatherPerceived_Patch.cs" />
     <Compile Include="HarmonyPatches\TryGainMemory_Patch.cs" />
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
-    <Compile Include="Comps\CompTreeLeavesSpawner.cs" />
+    <Compile Include="Comps\CompAutumnLeavesSpawner.cs" />
     <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
     <Compile Include="Jobs\JobDriver_SwimInHotSpring.cs" />
     <Compile Include="Jobs\JoyGiver_SwimInHotSpring.cs" />
@@ -325,7 +329,6 @@
     <Compile Include="ModExtensions\WeatherLetterExtensions.cs" />
     <Compile Include="ModExtensions\ThoughtExtensions.cs" />
     <Compile Include="MultiplayerSupport.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="ReGrowthMod.cs" />
     <Compile Include="ReGrowthSettings.cs" />
     <Compile Include="RGDefOf.cs" />
@@ -343,15 +346,6 @@
     <PackageReference Include="Lib.Harmony">
       <Version>2.0.2</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".vs\ReGrowthCore\v16\Server\sqlite3\db.lock" />
-    <None Include=".vs\ReGrowthCore\v16\Server\sqlite3\storage.ide" />
-    <None Include="obj\project.assets.json" />
-    <None Include="obj\project.nuget.cache" />
-    <None Include="obj\ReGrowthCore.csproj.nuget.dgspec.json" />
-    <None Include="obj\ReGrowthCore.csproj.nuget.g.props" />
-    <None Include="obj\ReGrowthCore.csproj.nuget.g.targets" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
