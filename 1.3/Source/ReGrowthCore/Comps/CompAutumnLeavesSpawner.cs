@@ -32,12 +32,16 @@ namespace ReGrowthCore
 			TickInterval(2000);
 		}
 
+		public virtual bool ShouldSpawn()
+        {
+			return true;
+		}
 		private void TickInterval(int interval)
 		{
-			if (!parent.Spawned || !ReGrowthSettings.SpawnLeaves)
-			{
+			if (!ShouldSpawn())
+            {
 				return;
-			}
+            }
 			CompCanBeDormant comp = parent.GetComp<CompCanBeDormant>();
 			if (comp != null)
 			{
@@ -194,7 +198,15 @@ namespace ReGrowthCore
 
 	public class CompAutumnLeavesSpawner : CompLeavesSpawnerBase
 	{
-		public override void CheckShouldSpawn()
+        public override bool ShouldSpawn()
+        {
+			if (!parent.Spawned || !ReGrowthSettings.SpawnAutumnLeaves)
+			{
+				return false;
+			}
+			return true;
+		}
+        public override void CheckShouldSpawn()
 		{
 			if (this.parent is Plant tree && !tree.LeaflessNow)
             {
@@ -209,6 +221,14 @@ namespace ReGrowthCore
 
 	public class CompLeavesSpawner : CompLeavesSpawnerBase
 	{
+		public override bool ShouldSpawn()
+		{
+			if (!parent.Spawned || !ReGrowthSettings.SpawnLeaves)
+			{
+				return false;
+			}
+			return true;
+		}
 		public override void CheckShouldSpawn()
 		{
 			if (this.parent is Plant tree && !tree.LeaflessNow)
