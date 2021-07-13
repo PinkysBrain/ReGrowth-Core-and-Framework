@@ -18,19 +18,20 @@ namespace ReGrowthAspenForest
 			{
 				return -100f;
 			}
-			if (tile.temperature < -10f)
+			if (tile.temperature < -5f)
 			{
 				return 0f;
 			}
-			if (tile.rainfall < 600f)
+			if (tile.rainfall < 300f)
 			{
 				return 0f;
 			}
 			Vector3 tileCenter = Find.WorldGrid.GetTileCenter(tileID);
 			var value = BiomePerlin.GetNoiseFor(BiomeDef.Named("RG-AF_AspenForest")).GetValue(tileCenter);
-			if (value > 0.6f && (0f - tile.temperature) > 0)
+			var tileTemperature = (0f - tile.temperature);
+			if (value >= 0.2 && tileTemperature >= 0)
             {
-				return (0f - tile.temperature) + 100;
+				return tileTemperature + value;
             }
 			return 0f;
 		}
