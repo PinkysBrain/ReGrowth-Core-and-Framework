@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+	<RG.SpawnAutumnLeaves>Spawn autumn leaves</RG.SpawnAutumnLeaves>
 	<RG.SpawnLeaves>Spawn leaves</RG.SpawnLeaves>
 	<RG.ColdFog>Cold fog</RG.ColdFog>
 	<RG.IceLayer>Ice layer</RG.IceLayer>

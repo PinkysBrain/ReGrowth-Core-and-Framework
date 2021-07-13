@@ -10,6 +10,8 @@ namespace ReGrowthCore
 {
     class ReGrowthSettings : ModSettings
     {
+        public static bool SpawnAutumnLeaves = true;
+
         public static bool SpawnLeaves = true;
 
         public static bool SpawnFogOnHotSprings = true;
@@ -35,6 +37,7 @@ namespace ReGrowthCore
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look(ref SpawnAutumnLeaves, "SpawnAutumnLeaves", true);
             Scribe_Values.Look(ref SpawnLeaves, "SpawnLeaves", true);
             Scribe_Values.Look(ref SpawnFogOnHotSprings, "SpawnFogOnHotSprings", true);
             Scribe_Values.Look(ref FlashUpdateCell, "FlashUpdateCell", false);
@@ -53,6 +56,7 @@ namespace ReGrowthCore
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
+            listingStandard.CheckboxLabeled("RG.SpawnAutumnLeaves".Translate(), ref SpawnAutumnLeaves);
             listingStandard.CheckboxLabeled("RG.SpawnLeaves".Translate(), ref SpawnLeaves);
             listingStandard.CheckboxLabeled("RG.SpawnFogOnHotSprings".Translate(), ref SpawnFogOnHotSprings);
             listingStandard.CheckboxLabeled("RG.DisableHailDamage".Translate(), ref DisableHailDamage);
