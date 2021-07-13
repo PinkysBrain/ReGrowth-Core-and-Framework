@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "70FUqn6IQ8ZC8M8NvAelo1Iv7AAZOUcdIrym1hlUuiT3ng9ZHvzxT9R/Kqnm4h7XFI/NJE3WDE3wgi7nfBu4Ew==",
+  "dgSpecHash": "oDNzOCcMy2f6S6keZE+uNyOg4uJviOdBn1qEwKNcmUWJmydoDYMP2J06//B6a1BeRta5LUH5Nj9X02wdHjBfBQ==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReGrowth-Core\\1.3\\Source\\ReGrowthCore\\ReGrowthCore.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.0.2\\lib.harmony.2.0.2.nupkg.sha512"
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.1.0\\lib.harmony.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }

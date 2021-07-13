@@ -2,11 +2,8 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Lib.Harmony/2.0.2": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "System.Runtime.InteropServices.RuntimeInformation"
-        ],
         "compile": {
           "lib/net472/0Harmony.dll": {}
         },
@@ -16,11 +13,8 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "Lib.Harmony/2.0.2": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "System.Runtime.InteropServices.RuntimeInformation"
-        ],
         "compile": {
           "lib/net472/0Harmony.dll": {}
         },
@@ -30,11 +24,8 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "Lib.Harmony/2.0.2": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "System.Runtime.InteropServices.RuntimeInformation"
-        ],
         "compile": {
           "lib/net472/0Harmony.dll": {}
         },
@@ -44,11 +35,8 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "Lib.Harmony/2.0.2": {
+      "Lib.Harmony/2.1.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "System.Runtime.InteropServices.RuntimeInformation"
-        ],
         "compile": {
           "lib/net472/0Harmony.dll": {}
         },
@@ -59,16 +47,16 @@
     }
   },
   "libraries": {
-    "Lib.Harmony/2.0.2": {
-      "sha512": "QzJnBhb8TiM0cYlxh82rHJMdhZNTmi9HNQQJ15qNyjMvdeDYF9V2aljmrnGafQ+bh6Af/L0iWHxuYlNrHck0nQ==",
+    "Lib.Harmony/2.1.0": {
+      "sha512": "Fp/Ky297MdU+iBQ44xFnJP1RwgDz/RrWaQBDqkqFlWMxDJrmuIkr2DCiiojGnTDf4Qz0YjXepDj0bChHgU1/vQ==",
       "type": "package",
-      "path": "lib.harmony/2.0.2",
+      "path": "lib.harmony/2.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
-        "lib.harmony.2.0.2.nupkg.sha512",
+        "lib.harmony.2.1.0.nupkg.sha512",
         "lib.harmony.nuspec",
         "lib/net35/0Harmony.dll",
         "lib/net35/0Harmony.xml",
@@ -78,6 +66,8 @@
         "lib/net472/0Harmony.xml",
         "lib/net48/0Harmony.dll",
         "lib/net48/0Harmony.xml",
+        "lib/net5.0/0Harmony.dll",
+        "lib/net5.0/0Harmony.xml",
         "lib/netcoreapp3.0/0Harmony.dll",
         "lib/netcoreapp3.0/0Harmony.xml",
         "lib/netcoreapp3.1/0Harmony.dll",
@@ -87,7 +77,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Lib.Harmony >= 2.0.2"
+      "Lib.Harmony >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -125,7 +115,7 @@
         "dependencies": {
           "Lib.Harmony": {
             "target": "Package",
-            "version": "[2.0.2, )"
+            "version": "[2.1.0, )"
           }
         }
       }
