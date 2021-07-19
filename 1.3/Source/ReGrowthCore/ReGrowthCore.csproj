@@ -313,6 +313,7 @@
     <Compile Include="ActiveTerrain\SpecialTerrainList.cs" />
     <Compile Include="ActiveTerrain\ThingComps.cs" />
     <Compile Include="BiomeWorkers\BiomePerlin.cs" />
+    <Compile Include="BiomeWorkers\BiomeWorker_BlackSwamp.cs" />
     <Compile Include="BiomeWorkers\BiomeWorker_AspenForest.cs" />
     <Compile Include="BiomeWorkers\BiomeWorker_NeverSpawn.cs" />
     <Compile Include="BiomeWorkers\BiomeWorker_VolcanicIceSheet.cs" />

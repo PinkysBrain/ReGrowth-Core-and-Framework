@@ -9,7 +9,7 @@ using UnityEngine;
 using Verse;
 using Verse.Noise;
 
-namespace ReGrowthAspenForest
+namespace ReGrowthCore
 {
 	[StaticConstructorOnStartup]
 	public static class BiomePerlin

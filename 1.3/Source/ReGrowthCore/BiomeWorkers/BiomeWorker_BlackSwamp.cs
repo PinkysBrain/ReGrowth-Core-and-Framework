@@ -1,5 +1,4 @@
-﻿using ReGrowthCore;
-using RimWorld;
+﻿using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -9,9 +8,9 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace ReGrowthAspenForest
+namespace ReGrowthCore
 {
-	public class BiomeWorker_AspenForest : BiomeWorker
+	public class BiomeWorker_BlackSwamp : BiomeWorker
 	{
 		public override float GetScore(Tile tile, int tileID)
 		{
@@ -28,13 +27,12 @@ namespace ReGrowthAspenForest
 				return 0f;
 			}
 			Vector3 tileCenter = Find.WorldGrid.GetTileCenter(tileID);
-			var value = BiomePerlin.GetNoiseFor(BiomeDef.Named("RG-AF_AspenForest")).GetValue(tileCenter);
-			var tileTemperature = (0f - tile.temperature);
-			if (value >= 0.2 && tileTemperature >= 0)
+			var value = BiomePerlin.GetNoiseFor(BiomeDef.Named("RG-BS_BlackSwamp")).GetValue(tileCenter);
+			if (value >= 0.6)
             {
-				return tileTemperature + value;
+				return (15f + (tile.temperature - 7f) + (tile.rainfall - 600f) / 180f + tile.swampiness * 3f) + 1;
             }
-			return 0f;
+			return -100f;
 		}
 	}
 }
