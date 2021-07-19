@@ -18,11 +18,15 @@ namespace ReGrowthCore
 			{
 				return -100f;
 			}
-			if (tile.temperature < -5f)
+			if (tile.temperature < -10f)
 			{
 				return 0f;
 			}
-			if (tile.rainfall < 300f)
+			if (tile.rainfall < 600f)
+			{
+				return 0f;
+			}
+			if (tile.swampiness < 0.5f)
 			{
 				return 0f;
 			}
