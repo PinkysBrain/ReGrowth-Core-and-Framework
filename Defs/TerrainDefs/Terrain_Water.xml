@@ -1,6 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+	<TerrainDef ParentName="WaterShallowBase">
+		<defName>RG_DarkMarsh</defName>
+		<label>marsh</label>
+		<texturePath>Terrain/Surfaces/DarkMarsh</texturePath>
+		<edgeType>Water</edgeType>
+		<waterDepthShader>Map/WaterDepth</waterDepthShader>
+		<renderPrecedence>325</renderPrecedence>
+		<statBases>
+			<Beauty>-2</Beauty>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints>
+		<avoidWander>true</avoidWander>
+		<takeSplashes>true</takeSplashes>
+		<driesTo>Soil</driesTo>
+		<extinguishesFire>true</extinguishesFire>
+		<tools>
+			<li>
+				<label>mud</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>MudInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+	</TerrainDef>
+
 	<ReGrowthCore.ActiveTerrainDef ParentName="WaterShallowBase">
 		<defName>RG_HotSpring</defName>
 		<label>hot spring</label>
@@ -82,7 +112,6 @@
 			<li>ShallowWater</li>
 		</affordances>
 	</TerrainDef>
-
 	<TerrainDef ParentName="RG_ToxicWasteShallowBase">
 		<defName>RG_ToxicWaste</defName>
 		<label>toxic waste</label>
