@@ -371,6 +371,7 @@
 		<favorability>Bad</favorability>
 		<perceivePriority>1</perceivePriority>
 		<exposedThought>RG_Sandy</exposedThought>
+		<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
 		<ambientSounds>
 			<li>Ambient_Wind_Fog</li>
 			<li>RG_Ambient_Sandstorm</li>
