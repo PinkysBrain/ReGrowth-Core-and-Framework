@@ -47,7 +47,8 @@
 		<description>Light winds help turbines but reduces the accuracy of ranged weapons.</description>
 		<repeatable>true</repeatable>
 		<favorability>Neutral</favorability>
-		<windSpeedFactor>1.8</windSpeedFactor>
+		<windSpeedFactor>1.0</windSpeedFactor>
+		<windSpeedOffset>0.5</windSpeedOffset>
 		<accuracyMultiplier>0.75</accuracyMultiplier>
 		<ambientSounds>
 			<li>Ambient_Wind_Storm</li>
@@ -366,7 +367,8 @@
 		<label>foggy sandstorm</label>
 		<isBad>true</isBad>
 		<description>Sand is blown around by wind and fog reduces the accuracy of ranged weapons.</description>
-		<windSpeedFactor>0.5</windSpeedFactor>
+		<windSpeedFactor>1.0</windSpeedFactor>
+		<windSpeedOffset>0.5</windSpeedOffset>
 		<accuracyMultiplier>0.5</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>1</perceivePriority>
@@ -417,6 +419,7 @@
 		<label>sandstorm</label>
 		<description>Sand is blown around by wind. Reduces the accuracy of ranged weapon and slows people down.</description>
 		<windSpeedFactor>1.0</windSpeedFactor>
+		<windSpeedOffset>0.5</windSpeedOffset>
 		<accuracyMultiplier>0.8</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
@@ -465,7 +468,8 @@
 		<defName>RG_SandStormHard</defName>
 		<label>hard sandstorm</label>
 		<description>Blowing sand and wind extremly reducesthe accuracy of ranged weapon and slows people down.</description>
-		<windSpeedFactor>2.0</windSpeedFactor>
+		<windSpeedFactor>1.5</windSpeedFactor>
+		<windSpeedOffset>1.0</windSpeedOffset>
 		<accuracyMultiplier>0.6</accuracyMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
