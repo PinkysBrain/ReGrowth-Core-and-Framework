@@ -8,57 +8,52 @@
 
 		<match Class="PatchOperationSequence">
 			<operations>
+
 				<!--============================================== RG_Overcast ==============================================-->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsDay</xpath>
 					<value>
 						<skyColorsDay>
-							<sky>(0.75,0.75,0.75)</sky>
+							<sky>(0.7,0.8,0.9)</sky>
 							<shadow>(1,1,1)</shadow>
-							<overlay>(0.765,0.765,0.765)</overlay>
-							<saturation>0.75</saturation>
+							<overlay>(1,1,1)</overlay>
+							<saturation>0.9</saturation>
 						</skyColorsDay>
 					</value>
 				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsDusk</xpath>
 					<value>
 						<skyColorsDusk>
-							<sky>(0.5,0.17,0.1)</sky>
+							<sky>(0.3,0.12,0.3)</sky>
 							<shadow>(1,1,1)</shadow>
-							<overlay>(0.7,0.7,0.7)</overlay>
-							<saturation>0.85</saturation>
+							<overlay>(0.8,0.8,0.8)</overlay>
+							<saturation>0.9</saturation>
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsNightEdge</xpath>
 					<value>
 						<skyColorsNightEdge>
-							<sky>(0.25,0.25,0.22)</sky>
+							<sky>(0.14,0.2,0.22)</sky>
 							<shadow>(1,1,1)</shadow>
-							<overlay>(0.6,0.6,0.6)</overlay>
-							<saturation>0.95</saturation>
+							<overlay>(0.75,0.75,0.75)</overlay>
+							<saturation>1.0</saturation>
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Overcast"]/skyColorsNightMid</xpath>
 					<value>
 						<skyColorsNightMid>
-							<sky>(0.2,0.3,0.2)</sky>
+							<sky>(0.055,0.115,0.125)</sky>
 							<shadow>(0.8,0.8,0.8)</shadow>
-							<overlay>(0.2,0.2,0.2)</overlay>
-							<saturation>0.3</saturation>
+							<overlay>(0.75,0.75,0.75)</overlay>
+							<saturation>1.35</saturation>
 						</skyColorsNightMid>
 					</value>
 				</li>
-
 
 				<!--============================================== RG_Windy ==============================================-->
 				<li Class="PatchOperationReplace">
@@ -72,7 +67,6 @@
 						</skyColorsDay>
 					</value>
 				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Windy"]/skyColorsDusk</xpath>
 					<value>
@@ -84,8 +78,6 @@
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Windy"]/skyColorsNightEdge</xpath>
 					<value>
@@ -97,8 +89,6 @@
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Windy"]/skyColorsNightMid</xpath>
 					<value>
@@ -123,7 +113,6 @@
 						</skyColorsDay>
 					</value>
 				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Hail" or defName = "RG_Drizzle" or defName = "RG_Monsoon"]/skyColorsDusk</xpath>
 					<value>
@@ -135,8 +124,6 @@
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Hail" or defName = "RG_Drizzle" or defName = "RG_Monsoon"]/skyColorsNightEdge</xpath>
 					<value>
@@ -148,8 +135,6 @@
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Hail" or defName = "RG_Drizzle" or defName = "RG_Monsoon"]/skyColorsNightMid</xpath>
 					<value>
@@ -174,7 +159,6 @@
 						</skyColorsDay>
 					</value>
 				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_FoggySnow"]/skyColorsDusk</xpath>
 					<value>
@@ -186,8 +170,6 @@
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_FoggySnow"]/skyColorsNightEdge</xpath>
 					<value>
@@ -199,8 +181,6 @@
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_FoggySnow"]/skyColorsNightMid</xpath>
 					<value>
@@ -225,7 +205,6 @@
 						</skyColorsDay>
 					</value>
 				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Blizzard"]/skyColorsDusk</xpath>
 					<value>
@@ -237,8 +216,6 @@
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Blizzard"]/skyColorsNightEdge</xpath>
 					<value>
@@ -250,8 +227,6 @@
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_Blizzard"]/skyColorsNightMid</xpath>
 					<value>
@@ -276,7 +251,6 @@
 						</skyColorsDay>
 					</value>
 				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_FoggySandstorm"]/skyColorsDusk</xpath>
 					<value>
@@ -288,8 +262,6 @@
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_FoggySandstorm"]/skyColorsNightEdge</xpath>
 					<value>
@@ -301,8 +273,6 @@
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_FoggySandstorm"]/skyColorsNightMid</xpath>
 					<value>
@@ -339,8 +309,6 @@
 						</skyColorsDusk>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_SandStorm" or defName = "RG_SandStormHard"]/skyColorsNightEdge</xpath>
 					<value>
@@ -352,8 +320,6 @@
 						</skyColorsNightEdge>
 					</value>
 				</li>
-
-
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WeatherDef[defName = "RG_SandStorm" or defName = "RG_SandStormHard"]/skyColorsNightMid</xpath>
 					<value>
