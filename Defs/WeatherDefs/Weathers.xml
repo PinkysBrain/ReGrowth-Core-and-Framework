@@ -310,11 +310,11 @@
 		<temperatureRange>-999~-0.5</temperatureRange>
 		<snowRate>2.5</snowRate>
 		<windSpeedFactor>2.0</windSpeedFactor>
-		<accuracyMultiplier>0.2</accuracyMultiplier>
+		<accuracyMultiplier>0.3</accuracyMultiplier>
+		<moveSpeedMultiplier>0.3</moveSpeedMultiplier>
 		<favorability>Bad</favorability>
 		<perceivePriority>2</perceivePriority>
 		<rainRate>1.0</rainRate>
-		<moveSpeedMultiplier>0.2</moveSpeedMultiplier>
 		<commonalityRainfallFactor>
 			<points>
 				<li>(0, 0)</li>
