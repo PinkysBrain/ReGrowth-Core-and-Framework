@@ -2,6 +2,85 @@
 <Defs>
 
 	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RG_AnimaSentientSoil</defName>
+		<label>sentient soil</label>
+		<texturePath>Terrain/Surfaces/AnimaSoil</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>1</fertility>
+		<takeFootprints>True</takeFootprints>
+		<tools>
+			<li>
+				<label>dirt</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>DirtInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RG_CrackedAnimaSoil</defName>
+		<label>cracked soil</label>
+		<texturePath>Terrain/Surfaces/AnimaSoilCracked</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>320</renderPrecedence>
+		<pathCost>1</pathCost>
+		<statBases>
+			<Beauty>-2</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0</fertility>
+		<takeFootprints>True</takeFootprints>
+		<avoidWander>true</avoidWander>
+		<driesTo>RG_AnimaSoil</driesTo>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RG_EnchantedAnimaSoil</defName>
+		<label>enchanted soil</label>
+		<texturePath>Terrain/Surfaces/AnimaEnchantedSoil</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>330</renderPrecedence>
+		<pathCost>1</pathCost>
+		<statBases>
+			<Beauty>-2</Beauty>
+			<BeautyOutdoors>1</BeautyOutdoors>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<affordances>
+			<li>Light</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>0.69</fertility>
+		<takeFootprints>True</takeFootprints>
+		<avoidWander>true</avoidWander>
+		<driesTo>RG_AnimaSoil</driesTo>
+	</TerrainDef>
+
+	<TerrainDef ParentName="NaturalTerrainBase">
 		<defName>RG_LavaRock</defName>
 		<label>vulcanic rock</label>
 		<texturePath>Terrain/Surfaces/LavaRock</texturePath>
@@ -10,6 +89,7 @@
 		<pathCost>2</pathCost>
 		<statBases>
 			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
 			<Cleanliness>-1</Cleanliness>
 		</statBases>
 		<scatterType>Rocky</scatterType>
@@ -44,6 +124,7 @@
 		<pathCost>4</pathCost>
 		<statBases>
 			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
 			<Cleanliness>-1</Cleanliness>
 		</statBases>
 		<scatterType>SoftDry</scatterType>
@@ -76,6 +157,7 @@
 		<pathCost>2</pathCost>
 		<statBases>
 			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
 			<Cleanliness>-1</Cleanliness>
 		</statBases>
 		<scatterType>Rocky</scatterType>
@@ -110,6 +192,7 @@
 		<pathCost>2</pathCost>
 		<statBases>
 			<Beauty>-3</Beauty>
+			<BeautyOutdoors>-1</BeautyOutdoors>
 			<Cleanliness>-3</Cleanliness>
 		</statBases>
 		<scatterType>Rocky</scatterType>
@@ -143,6 +226,7 @@
 		<pathCost>8</pathCost>
 		<statBases>
 			<Beauty>-7</Beauty>
+			<BeautyOutdoors>-3</BeautyOutdoors>
 			<Cleanliness>-7</Cleanliness>
 		</statBases>
 		<scatterType>Rocky</scatterType>
@@ -173,7 +257,8 @@
 		<renderPrecedence>315</renderPrecedence>
 		<pathCost>3</pathCost>
 		<statBases>
-			<Beauty>-1</Beauty>
+			<Beauty>-2</Beauty>
+			<BeautyOutdoors>-1</BeautyOutdoors>
 			<Cleanliness>-1</Cleanliness>
 		</statBases>
 		<generatedFilth>Filth_Dirt</generatedFilth>
@@ -197,6 +282,7 @@
 		<pathCost>2</pathCost>
 		<statBases>
 			<Beauty>-3</Beauty>
+			<BeautyOutdoors>-1</BeautyOutdoors>
 			<Cleanliness>-3</Cleanliness>
 		</statBases>
 		<scatterType>Rocky</scatterType>
@@ -230,6 +316,7 @@
 		<pathCost>2</pathCost>
 		<statBases>
 			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
 			<Cleanliness>-1</Cleanliness>
 		</statBases>
 		<scatterType>Rocky</scatterType>

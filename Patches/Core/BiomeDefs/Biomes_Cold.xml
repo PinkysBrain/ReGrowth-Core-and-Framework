@@ -20,10 +20,10 @@
 					<xpath>/Defs/BiomeDef[defName = "BorealForest"]/wildPlants</xpath>
 					<value>
 						<wildPlants>
-							<Plant_Grass>10.0</Plant_Grass>
+							<Plant_Grass>10</Plant_Grass>
 							<Plant_TallGrass>2.5</Plant_TallGrass>
-							<Plant_Brambles>2.0</Plant_Brambles>
-							<Plant_Moss>4.0</Plant_Moss>
+							<Plant_Brambles>2</Plant_Brambles>
+							<Plant_Moss>4</Plant_Moss>
 							<Plant_Bush>1.2</Plant_Bush>
 							<Plant_TreeBirch>0.4</Plant_TreeBirch>
 							<Plant_Berry>0.06</Plant_Berry>
@@ -56,7 +56,7 @@
 					<xpath>/Defs/BiomeDef[defName = "Tundra"]/wildPlants</xpath>
 					<value>
 						<wildPlants>
-							<Plant_Grass>20.0</Plant_Grass>
+							<Plant_Grass>20</Plant_Grass>
 							<Plant_TallGrass>3.5</Plant_TallGrass>
 							<Plant_Moss>6.5</Plant_Moss>
 							<Plant_Bush>4.5</Plant_Bush>
@@ -93,8 +93,8 @@
 					<xpath>/Defs/BiomeDef[defName = "ColdBog"]/wildPlants</xpath>
 					<value>
 						<wildPlants>
-							<Plant_Chokevine>3.0</Plant_Chokevine>
-							<Plant_Grass>15.0</Plant_Grass>
+							<Plant_Chokevine>3</Plant_Chokevine>
+							<Plant_Grass>15</Plant_Grass>
 							<Plant_TallGrass>2.5</Plant_TallGrass>
 							<Plant_Moss>3.0</Plant_Moss>
 							<Plant_Bush>0.3</Plant_Bush>
