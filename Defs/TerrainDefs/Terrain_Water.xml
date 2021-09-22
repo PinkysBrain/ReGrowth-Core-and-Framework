@@ -83,11 +83,13 @@
 	<ReGrowthCore.ActiveTerrainDef ParentName="RG_HotSpringBase">
 		<defName>RG_AnimaSpring</defName>
 		<label>anima spring</label>
+		<texturePath>Terrain/Surfaces/AnimaSpring</texturePath>
 	</ReGrowthCore.ActiveTerrainDef>
 
 	<ReGrowthCore.ActiveTerrainDef ParentName="RG_HotSpringDeepBase">
 		<defName>RG_AnimaSpringDeep</defName>
 		<label>deep anima spring</label>
+		<texturePath>Terrain/Surfaces/AnimaSpringDeep</texturePath>
 	</ReGrowthCore.ActiveTerrainDef>
 
 	<TerrainDef Abstract="True" Name="RG_ToxicWasteBase">
