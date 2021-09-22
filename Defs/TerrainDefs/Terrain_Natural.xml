@@ -2,7 +2,7 @@
 <Defs>
 
 	<TerrainDef ParentName="NaturalTerrainBase">
-		<defName>RG_AnimaSentientSoil</defName>
+		<defName>RG_AnimaSoil</defName>
 		<label>sentient soil</label>
 		<texturePath>Terrain/Surfaces/AnimaSoil</texturePath>
 		<edgeType>FadeRough</edgeType>
@@ -37,7 +37,42 @@
 	</TerrainDef>
 	
 	<TerrainDef ParentName="NaturalTerrainBase">
-		<defName>RG_CrackedAnimaSoil</defName>
+		<defName>RG_AnimaSoilEnchanted</defName>
+		<label>enchanted soil</label>
+		<texturePath>Terrain/Surfaces/AnimaEnchantedSoil</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<fertility>1</fertility>
+		<takeFootprints>True</takeFootprints>
+		<tools>
+			<li>
+				<label>dirt</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>DirtInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="NaturalTerrainBase">
+		<defName>RG_AnimaSoilCracked</defName>
 		<label>cracked soil</label>
 		<texturePath>Terrain/Surfaces/AnimaSoilCracked</texturePath>
 		<edgeType>FadeRough</edgeType>
@@ -57,27 +92,38 @@
 		<avoidWander>true</avoidWander>
 		<driesTo>RG_AnimaSoil</driesTo>
 	</TerrainDef>
-
+	
 	<TerrainDef ParentName="NaturalTerrainBase">
-		<defName>RG_EnchantedAnimaSoil</defName>
-		<label>enchanted soil</label>
-		<texturePath>Terrain/Surfaces/AnimaEnchantedSoil</texturePath>
+		<defName>RG_AnimaSpringSand</defName>
+		<label>sand</label>
+		<texturePath>Terrain/Surfaces/AnimaSpringSand</texturePath>
 		<edgeType>FadeRough</edgeType>
-		<renderPrecedence>330</renderPrecedence>
-		<pathCost>1</pathCost>
+		<renderPrecedence>350</renderPrecedence>
+		<pathCost>4</pathCost>
 		<statBases>
-			<Beauty>-2</Beauty>
-			<BeautyOutdoors>1</BeautyOutdoors>
-			<Cleanliness>-2</Cleanliness>
+			<Beauty>-1</Beauty>
+			<BeautyOutdoors>0</BeautyOutdoors>
+			<Cleanliness>-1</Cleanliness>
 		</statBases>
+		<scatterType>SoftDry</scatterType>
 		<affordances>
 			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>Diggable</li>
 		</affordances>
-		<generatedFilth>Filth_Dirt</generatedFilth>
-		<fertility>0.69</fertility>
+		<fertility>0.005</fertility>
 		<takeFootprints>True</takeFootprints>
-		<avoidWander>true</avoidWander>
-		<driesTo>RG_AnimaSoil</driesTo>
+		<tools>
+			<li>
+				<label>sand</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>SandInEyes</hediff>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
 	</TerrainDef>
 
 	<TerrainDef ParentName="NaturalTerrainBase">
