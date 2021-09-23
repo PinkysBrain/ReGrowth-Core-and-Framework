@@ -84,6 +84,11 @@
 		<defName>RG_AnimaSpring</defName>
 		<label>anima spring</label>
 		<texturePath>Terrain/Surfaces/AnimaSpring</texturePath>
+		<terrainComps>
+			<li Class="ReGrowthCore.TerrainCompProperties_Healer">
+				<amountToHeal>1</amountToHeal>
+			</li>
+		</terrainComps>
 	</ReGrowthCore.ActiveTerrainDef>
 
 	<ReGrowthCore.ActiveTerrainDef ParentName="RG_HotSpringDeepBase">

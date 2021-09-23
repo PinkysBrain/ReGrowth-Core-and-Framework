@@ -305,6 +305,7 @@
     <Compile Include="ActiveTerrain\Comps\TerrainComp_Glower.cs" />
     <Compile Include="ActiveTerrain\Comps\TerrainComp_MoteSpawner.cs" />
     <Compile Include="ActiveTerrain\Comps\TerrainComp_HeatPush.cs" />
+    <Compile Include="ActiveTerrain\Comps\TerrainComp_SelfClean - Copy.cs" />
     <Compile Include="ActiveTerrain\Comps\TerrainComp_SelfClean.cs" />
     <Compile Include="ActiveTerrain\Comps\TerrainComp_TempControl.cs" />
     <Compile Include="ActiveTerrain\DefExtensionActive.cs" />
