@@ -11,30 +11,20 @@ using Verse.Noise;
 
 namespace ReGrowthCore
 {
-	[StaticConstructorOnStartup]
 	public static class BiomePerlin
 	{
-		private static float FreqMultiplier
-		{
-			get
-			{
-				return 1f;
-			}
-		}
 		private static Dictionary<BiomeDef, Multiply> noisesPerBiomes = new Dictionary<BiomeDef, Multiply>();
-		public static Multiply GetNoiseFor(BiomeDef biomeDef)
+		public static Multiply GetNoiseFor(BiomeDef biomeDef, float freqMultiplier = 1f)
 		{
 			if (!noisesPerBiomes.TryGetValue(biomeDef, out var value))
 			{
-				value = SetupBiomeNoise(biomeDef);
+				value = SetupBiomeNoise(biomeDef, freqMultiplier);
 				noisesPerBiomes[biomeDef] = value;
 			}
 			return value;
 		}
-
-		private static Multiply SetupBiomeNoise(BiomeDef biomeDef)
+		private static Multiply SetupBiomeNoise(BiomeDef biomeDef, float freqMultiplier)
 		{
-			float freqMultiplier = FreqMultiplier;
 			Rand.PushState();
 			Rand.Seed = biomeDef.GetHashCode();
 			ModuleBase moduleBase = new Perlin((double)(0.09f * freqMultiplier), 2.0, 0.40000000596046448, 6, Rand.Range(0, int.MaxValue), QualityMode.High);
