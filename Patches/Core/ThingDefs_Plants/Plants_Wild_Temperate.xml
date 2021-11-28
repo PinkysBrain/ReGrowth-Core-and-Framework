@@ -71,6 +71,17 @@
 						<immatureGraphicPath>Things/Plant/Immature/BerryPlant_Immature</immatureGraphicPath>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/ThingDef[defName="Plant_Potato"]</xpath>
+					<value>
+						<li Class="ReGrowthCore.PlantExtension">
+							<terrainListToGrowOnly>
+								<li>Gravel</li>
+							</terrainListToGrowOnly>
+						</li>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
