@@ -296,6 +296,10 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\..\VanillaExpandedFramework\1.3\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveTerrain\ActiveTerrainUtility.cs" />
@@ -329,8 +333,6 @@
     <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
     <Compile Include="Jobs\JobDriver_SwimInHotSpring.cs" />
     <Compile Include="Jobs\JoyGiver_SwimInHotSpring.cs" />
-    <Compile Include="MapExtender\MapComponentExtender.cs" />
-    <Compile Include="MapExtender\ObjectSpawnsDef.cs" />
     <Compile Include="ModExtensions\PlantExtension.cs" />
     <Compile Include="ModExtensions\WeatherLetterExtensions.cs" />
     <Compile Include="ModExtensions\ThoughtExtensions.cs" />
@@ -339,9 +341,7 @@
     <Compile Include="ReGrowthSettings.cs" />
     <Compile Include="RGDefOf.cs" />
     <Compile Include="Things\DevilDust_Tornado.cs" />
-    <Compile Include="WeatherOverlays\WeatherOverlay_CustomTwo.cs" />
     <Compile Include="WeatherOverlays\WeatherOverlay_Hail.cs" />
-    <Compile Include="WeatherOverlays\WeatherOverlay_Custom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
