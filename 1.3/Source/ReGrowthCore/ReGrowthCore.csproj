@@ -14,8 +14,8 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -327,7 +327,6 @@
     <Compile Include="HarmonyPatches\CanEverPlantAt_Patch.cs" />
     <Compile Include="HarmonyPatches\CurWeatherPerceived_Patch.cs" />
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />
-    <Compile Include="HarmonyPatches\TryGainMemory_Patch.cs" />
     <Compile Include="HarmonyPatches\GetFallColorFactor_Patch.cs" />
     <Compile Include="Comps\CompAutumnLeavesSpawner.cs" />
     <Compile Include="Incidents\IncidentWorker_DevilDusts.cs" />
@@ -335,7 +334,6 @@
     <Compile Include="Jobs\JoyGiver_SwimInHotSpring.cs" />
     <Compile Include="ModExtensions\PlantExtension.cs" />
     <Compile Include="ModExtensions\WeatherLetterExtensions.cs" />
-    <Compile Include="ModExtensions\ThoughtExtensions.cs" />
     <Compile Include="MultiplayerSupport.cs" />
     <Compile Include="ReGrowthMod.cs" />
     <Compile Include="ReGrowthSettings.cs" />
